@@ -1,0 +1,27 @@
+@use '@angular/cdk' as cdk;
+
+@include cdk.overlay();
+
+@import "./styles";
+
+:root {
+  --kit-color--primary: #31302d;
+  --kit-color--secondary: #f3b0cf;
+  --kit-color--background: #ffffff;
+  --kit-color--border: #dedcd9;
+  --kit-color--focus: #3b99fc;
+  --kit-color--error: #c64758;
+  --kit-color--text: #31302d;
+
+  --kit-radius--base: 0px;
+
+  --kit-opacity--disabled: 0.4;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}

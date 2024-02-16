@@ -1,0 +1,17 @@
+<div class="kit-toggle" [class.kit-toggle--disabled]="disabled">
+    <button
+        class="kit-toggle-button"
+        role="switch"
+        type="button"
+        [attr.aria-checked]="checked"
+        [attr.aria-disabled]="disabled"
+        [disabled]="disabled"
+        [id]="inputId"
+        (click)="toggle()"
+    >
+        <span aria-hidden="true"></span>
+    </button>
+    <label class="kit-toggle-label" [for]="inputId">
+        <ng-content />
+    </label>
+</div>

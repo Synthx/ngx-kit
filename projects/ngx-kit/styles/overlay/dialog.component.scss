@@ -1,0 +1,68 @@
+.kit-fullscreen-dialog-panel {
+  .kit-dialog {
+    height: 100%;
+    border-radius: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-top: env(safe-area-inset-top);
+    max-height: 100%;
+  }
+}
+
+.kit-dialog {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--kit-color--background);
+  border-radius: 10px;
+  box-shadow: var(--kit-shadow--base);
+  max-height: 85vh;
+
+  &-title {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    border-bottom: 1px solid var(--kit-color--divider);
+    padding: 10px 20px;
+
+    &:empty {
+      display: none;
+    }
+
+    span[kit-dialog-title] {
+      flex: 1;
+      color: var(--kit-color--primary);
+      font-family: var(--kit-typo--font-family);
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 21px;
+    }
+  }
+
+  &-content {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    color: var(--kit-color--primary);
+    font-family: var(--kit-typo--font-family);
+    font-weight: 400;
+    font-size: 15px;
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &:empty {
+        display: none;
+      }
+
+      > * {
+        flex: 1;
+      }
+    }
+  }
+}

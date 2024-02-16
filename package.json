@@ -1,0 +1,53 @@
+{
+  "name": "ngx-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "build": "ng build",
+    "test": "ng test",
+    "start": "ng run ngx-kit:storybook",
+    "storybook:build": "ng run ngx-kit:build-storybook",
+    "format": "bunx @biomejs/biome format ./projects --write",
+    "lint": "bunx @biomejs/biome lint ./projects",
+    "check": "bunx @biomejs/biome check ./projects",
+    "check:apply": "bunx @biomejs/biome check --apply ./projects"
+  },
+  "dependencies": {
+    "@angular/animations": "^17.2.0",
+    "@angular/cdk": "^17.2.1",
+    "@angular/common": "^17.2.0",
+    "@angular/compiler": "^17.2.0",
+    "@angular/core": "^17.2.0",
+    "@angular/forms": "^17.2.0",
+    "@angular/platform-browser": "^17.2.0",
+    "@angular/platform-browser-dynamic": "^17.2.0",
+    "@angular/router": "^17.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.2.0",
+    "@angular/cli": "^17.2.0",
+    "@angular/compiler-cli": "^17.2.0",
+    "@biomejs/biome": "1.5.3",
+    "@compodoc/compodoc": "^1.1.23",
+    "@storybook/addon-a11y": "^7.6.16",
+    "@storybook/addon-docs": "^7.6.16",
+    "@storybook/addon-essentials": "^7.6.16",
+    "@storybook/addon-interactions": "^7.6.16",
+    "@storybook/addon-links": "^7.6.16",
+    "@storybook/angular": "^7.6.16",
+    "@storybook/blocks": "^7.6.16",
+    "@storybook/test": "^7.6.16",
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ng-packagr": "^17.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.16",
+    "typescript": "~5.3.2"
+  }
+}

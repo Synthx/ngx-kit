@@ -1,0 +1,5122 @@
+{
+	"pipes": [],
+	"interfaces": [
+		{
+			"name": "KitToastData",
+			"id": "interface-KitToastData-9fc850c562a952504e3b60561728eea2bec04884177165b905939fbb0cc9b9eff26212343cc01027d42545d33b6d3579dbccf7cd9e1b64e68aa8dd1d508a1250",
+			"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-data.ts",
+			"deprecated": false,
+			"deprecationMessage": "",
+			"type": "interface",
+			"sourceCode": "import { InjectionToken } from \"@angular/core\";\nimport { KitToastType } from \"./toast.component\";\n\nexport interface KitToastData {\n\tcontent: string;\n\ttype: KitToastType;\n\ticon?: string;\n}\n\nexport const KIT_TOAST_DATA = new InjectionToken<KitToastData>(\n\t\"kit-toast-data\",\n);\n",
+			"properties": [
+				{
+					"name": "content",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "string",
+					"optional": false,
+					"description": "",
+					"line": 5
+				},
+				{
+					"name": "icon",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "string",
+					"optional": true,
+					"description": "",
+					"line": 7
+				},
+				{
+					"name": "type",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "KitToastType",
+					"optional": false,
+					"description": "",
+					"line": 6
+				}
+			],
+			"indexSignatures": [],
+			"kind": 171,
+			"methods": [],
+			"extends": []
+		}
+	],
+	"injectables": [
+		{
+			"name": "KitDialogService",
+			"id": "injectable-KitDialogService-23bd0008f3b11d5e442a1ff3672907412400b2edda632612c3d99c4bf1c277970c3a6bcaf746cb5f77711401a93926d73dc7826c7e23247ff38b994630938d6a",
+			"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.service.ts",
+			"properties": [],
+			"methods": [
+				{
+					"name": "_createRef",
+					"args": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": ""
+						},
+						{
+							"name": "config",
+							"type": "DialogConfig<D | DialogRef<R, C>>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true
+						}
+					],
+					"optional": false,
+					"returnType": "DialogRef<R, C>",
+					"typeParameters": ["R", "D", "C"],
+					"line": 16,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"modifierKind": [123],
+					"jsdoctags": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						},
+						{
+							"name": "config",
+							"type": "DialogConfig<D | DialogRef<R, C>>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true,
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "close",
+					"args": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": ""
+						},
+						{
+							"name": "result",
+							"type": "R",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": ["R", "C"],
+					"line": 94,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						},
+						{
+							"name": "result",
+							"type": "R",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true,
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "closeAll",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 107,
+					"deprecated": false,
+					"deprecationMessage": ""
+				},
+				{
+					"name": "open",
+					"args": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": ""
+						},
+						{
+							"name": "config",
+							"type": "DialogConfig<D | DialogRef<R, C>>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true
+						}
+					],
+					"optional": false,
+					"returnType": "DialogRef<R, C>",
+					"typeParameters": ["R", "D", "C"],
+					"line": 33,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						},
+						{
+							"name": "config",
+							"type": "DialogConfig<D | DialogRef<R, C>>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true,
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "open$",
+					"args": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": ""
+						},
+						{
+							"name": "config",
+							"type": "DialogConfig<D | DialogRef<R, C>>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true
+						}
+					],
+					"optional": false,
+					"returnType": "Observable<R | undefined>",
+					"typeParameters": ["R", "D", "C"],
+					"line": 55,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						},
+						{
+							"name": "config",
+							"type": "DialogConfig<D | DialogRef<R, C>>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true,
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "openFullscreen",
+					"args": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": ""
+						},
+						{
+							"name": "config",
+							"type": "DialogConfig<D | DialogRef<R, C>>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true
+						}
+					],
+					"optional": false,
+					"returnType": "DialogRef<R, C>",
+					"typeParameters": ["R", "D", "C"],
+					"line": 62,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						},
+						{
+							"name": "config",
+							"type": "DialogConfig<D | DialogRef<R, C>>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true,
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "openFullscreen$",
+					"args": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": ""
+						},
+						{
+							"name": "config",
+							"type": "DialogConfig<D | DialogRef<R, C>>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true
+						}
+					],
+					"optional": false,
+					"returnType": "Observable<R | undefined>",
+					"typeParameters": ["R", "D", "C"],
+					"line": 87,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						},
+						{
+							"name": "config",
+							"type": "DialogConfig<D | DialogRef<R, C>>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true,
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				}
+			],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"description": "",
+			"rawdescription": "\n",
+			"sourceCode": "import { Dialog, DialogConfig, DialogRef } from \"@angular/cdk/dialog\";\nimport { BreakpointObserver, Breakpoints } from \"@angular/cdk/layout\";\nimport { ComponentType, Overlay } from \"@angular/cdk/overlay\";\nimport { Injectable, reflectComponentType } from \"@angular/core\";\nimport { Observable } from \"rxjs\";\nimport { KitDialogRef } from \"./dialog-ref\";\n\n@Injectable()\nexport class KitDialogService {\n\tconstructor(\n\t\tprivate readonly dialog: Dialog,\n\t\tprivate readonly breakpointObserver: BreakpointObserver,\n\t\tprivate readonly overlay: Overlay,\n\t) {}\n\n\tprivate _createRef<R = unknown, D = unknown, C = unknown>(\n\t\tcomponent: ComponentType<C>,\n\t\tconfig?: DialogConfig<D, DialogRef<R, C>>,\n\t): DialogRef<R, C> {\n\t\tconst mirror = reflectComponentType(component);\n\n\t\treturn this.dialog.open(component, {\n\t\t\tid: mirror?.selector,\n\t\t\t...config,\n\t\t\tproviders: (dialogRef) => {\n\t\t\t\tconst kitDialogRef = new KitDialogRef(dialogRef);\n\n\t\t\t\treturn [{ provide: kitDialogRef, useValue: kitDialogRef }];\n\t\t\t},\n\t\t});\n\t}\n\n\topen<R = unknown, D = unknown, C = unknown>(\n\t\tcomponent: ComponentType<C>,\n\t\tconfig?: DialogConfig<D, DialogRef<R, C>>,\n\t): DialogRef<R, C> {\n\t\tconst defaultConfig: DialogConfig<D, DialogRef<R, C>> = {\n\t\t\tmaxHeight: \"85%\",\n\t\t\twidth: \"90%\",\n\t\t\tmaxWidth: \"90%\",\n\t\t};\n\n\t\tconst isWeb = this.breakpointObserver.isMatched(Breakpoints.Web);\n\t\tif (isWeb) {\n\t\t\tdefaultConfig.width = \"500px\";\n\t\t\tdefaultConfig.maxWidth = \"500px\";\n\t\t}\n\n\t\treturn this._createRef<R, D, C>(component, {\n\t\t\t...defaultConfig,\n\t\t\t...config,\n\t\t});\n\t}\n\n\topen$<R = unknown, D = unknown, C = unknown>(\n\t\tcomponent: ComponentType<C>,\n\t\tconfig?: DialogConfig<D, DialogRef<R, C>>,\n\t): Observable<R | undefined> {\n\t\treturn this.open(component, config).closed;\n\t}\n\n\topenFullscreen<R = unknown, D = unknown, C = unknown>(\n\t\tcomponent: ComponentType<C>,\n\t\tconfig?: DialogConfig<D, DialogRef<R, C>>,\n\t): DialogRef<R, C> {\n\t\tconst defaultConfig: DialogConfig<D, DialogRef<R, C>> = {\n\t\t\tpanelClass: \"kit-fullscreen-dialog-panel\",\n\t\t\theight: \"100%\",\n\t\t\twidth: \"100%\",\n\t\t\tmaxWidth: \"100%\",\n\t\t};\n\n\t\tconst isWeb = this.breakpointObserver.isMatched(Breakpoints.Web);\n\t\tif (isWeb) {\n\t\t\tdefaultConfig.maxHeight = \"100%\";\n\t\t\tdefaultConfig.width = \"550px\";\n\t\t\tdefaultConfig.maxWidth = \"550px\";\n\t\t\tdefaultConfig.positionStrategy = this.overlay.position().global().right();\n\t\t}\n\n\t\treturn this._createRef<R, D, C>(component, {\n\t\t\t...defaultConfig,\n\t\t\t...config,\n\t\t});\n\t}\n\n\topenFullscreen$<R = unknown, D = unknown, C = unknown>(\n\t\tcomponent: ComponentType<C>,\n\t\tconfig?: DialogConfig<D, DialogRef<R, C>>,\n\t): Observable<R | undefined> {\n\t\treturn this.openFullscreen(component, config).closed;\n\t}\n\n\tclose<R = unknown, C = unknown>(\n\t\tcomponent: ComponentType<C>,\n\t\tresult?: R,\n\t): void {\n\t\tconst mirror = reflectComponentType(component);\n\t\tif (!mirror) {\n\t\t\treturn;\n\t\t}\n\n\t\tconst dialogRef = this.dialog.getDialogById(mirror.selector);\n\t\tdialogRef?.close(result);\n\t}\n\n\tcloseAll(): void {\n\t\tthis.dialog.closeAll();\n\t}\n}\n",
+			"constructorObj": {
+				"name": "constructor",
+				"description": "",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"args": [
+					{
+						"name": "dialog",
+						"type": "Dialog",
+						"deprecated": false,
+						"deprecationMessage": ""
+					},
+					{
+						"name": "breakpointObserver",
+						"type": "BreakpointObserver",
+						"deprecated": false,
+						"deprecationMessage": ""
+					},
+					{
+						"name": "overlay",
+						"type": "Overlay",
+						"deprecated": false,
+						"deprecationMessage": ""
+					}
+				],
+				"line": 9,
+				"jsdoctags": [
+					{
+						"name": "dialog",
+						"type": "Dialog",
+						"deprecated": false,
+						"deprecationMessage": "",
+						"tagName": {
+							"text": "param"
+						}
+					},
+					{
+						"name": "breakpointObserver",
+						"type": "BreakpointObserver",
+						"deprecated": false,
+						"deprecationMessage": "",
+						"tagName": {
+							"text": "param"
+						}
+					},
+					{
+						"name": "overlay",
+						"type": "Overlay",
+						"deprecated": false,
+						"deprecationMessage": "",
+						"tagName": {
+							"text": "param"
+						}
+					}
+				]
+			},
+			"extends": [],
+			"type": "injectable"
+		},
+		{
+			"name": "KitToastService",
+			"id": "injectable-KitToastService-67fc6e3e786dc9cf1228c1a3d7e9eec7ddee278625a6a9235d2922307baa0fe0334c3a121ae9350c4c23924a638221ae85d5a3bac51130ef7efa8187e1e9a2d6",
+			"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.service.ts",
+			"properties": [
+				{
+					"name": "defaultConfig",
+					"defaultValue": "inject(KIT_TOAST_DEFAULT_CONFIG)",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 21,
+					"modifierKind": [123, 148]
+				},
+				{
+					"name": "lastRef",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "KitToastRef",
+					"optional": true,
+					"description": "",
+					"line": 23,
+					"modifierKind": [123]
+				}
+			],
+			"methods": [
+				{
+					"name": "createOverlayRef",
+					"args": [
+						{
+							"name": "config",
+							"type": "KitToastConfig",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "OverlayRef",
+					"typeParameters": [],
+					"line": 99,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"modifierKind": [123],
+					"jsdoctags": [
+						{
+							"name": "config",
+							"type": "KitToastConfig",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "dismiss",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 95,
+					"deprecated": false,
+					"deprecationMessage": ""
+				},
+				{
+					"name": "open",
+					"args": [
+						{
+							"name": "content",
+							"type": "string",
+							"deprecated": false,
+							"deprecationMessage": ""
+						},
+						{
+							"name": "type",
+							"type": "KitToastType",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"defaultValue": "\"primary\""
+						},
+						{
+							"name": "config",
+							"type": "KitToastConfig",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true
+						}
+					],
+					"optional": false,
+					"returnType": "KitToastRef",
+					"typeParameters": [],
+					"line": 61,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "content",
+							"type": "string",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						},
+						{
+							"name": "type",
+							"type": "KitToastType",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"defaultValue": "\"primary\"",
+							"tagName": {
+								"text": "param"
+							}
+						},
+						{
+							"name": "config",
+							"type": "KitToastConfig",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true,
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "openFromComponent",
+					"args": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": ""
+						},
+						{
+							"name": "config",
+							"type": "KitToastConfig",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true
+						}
+					],
+					"optional": false,
+					"returnType": "KitToastRef",
+					"typeParameters": ["C"],
+					"line": 31,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "component",
+							"type": "ComponentType<C>",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						},
+						{
+							"name": "config",
+							"type": "KitToastConfig",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true,
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				}
+			],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"description": "",
+			"rawdescription": "\n",
+			"sourceCode": "import { BreakpointObserver, Breakpoints } from \"@angular/cdk/layout\";\nimport {\n\tComponentType,\n\tOverlay,\n\tOverlayConfig,\n\tOverlayRef,\n} from \"@angular/cdk/overlay\";\nimport { ComponentPortal } from \"@angular/cdk/portal\";\nimport { Injectable, Injector, inject } from \"@angular/core\";\nimport {\n\tKIT_TOAST_DATA,\n\tKIT_TOAST_DEFAULT_CONFIG,\n\tKitSimpleToast,\n\tKitToastConfig,\n\tKitToastRef,\n\tKitToastType,\n} from \"./toast.component\";\n\n@Injectable()\nexport class KitToastService {\n\tprivate readonly defaultConfig = inject(KIT_TOAST_DEFAULT_CONFIG);\n\n\tprivate lastRef?: KitToastRef;\n\n\tconstructor(\n\t\tprivate readonly rootInjector: Injector,\n\t\tprivate readonly overlay: Overlay,\n\t\tprivate readonly breakpointObserver: BreakpointObserver,\n\t) {}\n\n\topenFromComponent<C = unknown>(\n\t\tcomponent: ComponentType<C>,\n\t\tconfig?: KitToastConfig,\n\t): KitToastRef {\n\t\tthis.lastRef?.dismiss();\n\n\t\tconst _config: KitToastConfig = {\n\t\t\t...new KitToastConfig(),\n\t\t\t...this.defaultConfig,\n\t\t\t...config,\n\t\t};\n\t\tconst overlayRef = this.createOverlayRef(_config);\n\t\tconst toastRef = new KitToastRef(overlayRef);\n\t\tthis.lastRef = toastRef;\n\n\t\tconst injector = Injector.create({\n\t\t\tparent: this.rootInjector,\n\t\t\tproviders: [{ provide: KitToastRef, useValue: toastRef }],\n\t\t});\n\n\t\tconst componentPortal = new ComponentPortal(component, null, injector);\n\t\toverlayRef.attach(componentPortal);\n\n\t\tif (_config.duration && _config.duration > 0) {\n\t\t\ttoastRef.dismissAfter(_config.duration);\n\t\t}\n\n\t\treturn toastRef;\n\t}\n\n\topen(\n\t\tcontent: string,\n\t\ttype: KitToastType = \"primary\",\n\t\tconfig?: KitToastConfig,\n\t): KitToastRef {\n\t\tthis.lastRef?.dismiss();\n\n\t\tconst _config: KitToastConfig = {\n\t\t\t...new KitToastConfig(),\n\t\t\t...this.defaultConfig,\n\t\t\t...config,\n\t\t};\n\t\tconst overlayRef = this.createOverlayRef(_config);\n\t\tconst toastRef = new KitToastRef(overlayRef);\n\t\tthis.lastRef = toastRef;\n\n\t\tconst injector = Injector.create({\n\t\t\tparent: this.rootInjector,\n\t\t\tproviders: [\n\t\t\t\t{ provide: KitToastRef, useValue: toastRef },\n\t\t\t\t{ provide: KIT_TOAST_DATA, useValue: { content, type } },\n\t\t\t],\n\t\t});\n\n\t\tconst componentPortal = new ComponentPortal(KitSimpleToast, null, injector);\n\t\toverlayRef.attach(componentPortal);\n\n\t\tif (_config.duration && _config.duration > 0) {\n\t\t\ttoastRef.dismissAfter(_config.duration);\n\t\t}\n\n\t\treturn toastRef;\n\t}\n\n\tdismiss(): void {\n\t\tthis.lastRef?.dismiss();\n\t}\n\n\tprivate createOverlayRef(config: KitToastConfig): OverlayRef {\n\t\tconst isWeb = this.breakpointObserver.isMatched(Breakpoints.Web);\n\t\tconst overlayConfig: OverlayConfig = {\n\t\t\tmaxWidth: isWeb ? \"450px\" : \"85%\",\n\t\t};\n\n\t\tlet strategy = this.overlay.position().global();\n\t\t// set horizontal position\n\t\tif (config.horizontalPosition === \"left\") {\n\t\t\tstrategy = strategy.left(\"15px\");\n\t\t} else if (config.horizontalPosition === \"right\") {\n\t\t\tstrategy = strategy.right(\"15px\");\n\t\t} else {\n\t\t\tstrategy = strategy.centerHorizontally();\n\t\t}\n\n\t\t// set vertical position\n\t\tif (config.verticalPosition === \"top\") {\n\t\t\tstrategy = strategy.top(\"calc(15px + env(safe-area-inset-top))\");\n\t\t} else {\n\t\t\tstrategy = strategy.bottom(\"calc(15px + env(safe-area-inset-bottom))\");\n\t\t}\n\n\t\toverlayConfig.positionStrategy = strategy;\n\n\t\treturn this.overlay.create(overlayConfig);\n\t}\n}\n",
+			"constructorObj": {
+				"name": "constructor",
+				"description": "",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"args": [
+					{
+						"name": "rootInjector",
+						"type": "Injector",
+						"deprecated": false,
+						"deprecationMessage": ""
+					},
+					{
+						"name": "overlay",
+						"type": "Overlay",
+						"deprecated": false,
+						"deprecationMessage": ""
+					},
+					{
+						"name": "breakpointObserver",
+						"type": "BreakpointObserver",
+						"deprecated": false,
+						"deprecationMessage": ""
+					}
+				],
+				"line": 23,
+				"jsdoctags": [
+					{
+						"name": "rootInjector",
+						"type": "Injector",
+						"deprecated": false,
+						"deprecationMessage": "",
+						"tagName": {
+							"text": "param"
+						}
+					},
+					{
+						"name": "overlay",
+						"type": "Overlay",
+						"deprecated": false,
+						"deprecationMessage": "",
+						"tagName": {
+							"text": "param"
+						}
+					},
+					{
+						"name": "breakpointObserver",
+						"type": "BreakpointObserver",
+						"deprecated": false,
+						"deprecationMessage": "",
+						"tagName": {
+							"text": "param"
+						}
+					}
+				]
+			},
+			"extends": [],
+			"type": "injectable"
+		}
+	],
+	"guards": [],
+	"interceptors": [],
+	"classes": [
+		{
+			"name": "KitDialogRef",
+			"id": "class-KitDialogRef-376776ef080cc4e56857f931f24b9ab2de09012cac689f21306e311e4f0c2c74cb79309105692a40de9ec29afe111eaa0dafb535e1e6f2e4171a7b7bc9fcbd30",
+			"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog-ref.ts",
+			"deprecated": false,
+			"deprecationMessage": "",
+			"type": "class",
+			"sourceCode": "import { DialogRef } from \"@angular/cdk/dialog\";\n\nexport class KitDialogRef<C, R = unknown> {\n\tconstructor(private readonly dialogRef: DialogRef<R, C>) {}\n\n\tdismiss(result?: R): void {\n\t\tthis.dialogRef.close(result);\n\t}\n}\n",
+			"constructorObj": {
+				"name": "constructor",
+				"description": "",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"args": [
+					{
+						"name": "dialogRef",
+						"type": "DialogRef<R | C>",
+						"deprecated": false,
+						"deprecationMessage": ""
+					}
+				],
+				"line": 3,
+				"jsdoctags": [
+					{
+						"name": "dialogRef",
+						"type": "DialogRef<R | C>",
+						"deprecated": false,
+						"deprecationMessage": "",
+						"tagName": {
+							"text": "param"
+						}
+					}
+				]
+			},
+			"properties": [],
+			"methods": [
+				{
+					"name": "dismiss",
+					"args": [
+						{
+							"name": "result",
+							"type": "R",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 6,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "result",
+							"type": "R",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"optional": true,
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				}
+			],
+			"indexSignatures": [],
+			"extends": [],
+			"inputsClass": [],
+			"outputsClass": [],
+			"hostBindings": [],
+			"hostListeners": []
+		},
+		{
+			"name": "KitToastConfig",
+			"id": "class-KitToastConfig-81b54aabebc1b2c0177a8ec2e506fdbf38707c3a561958f36b23946bb97b756f58eb4f583866d161a65c55d1a892ad528ae3f0bbd607af4c1dc277d318ec6a8c",
+			"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts",
+			"deprecated": false,
+			"deprecationMessage": "",
+			"type": "class",
+			"sourceCode": "import { InjectionToken } from \"@angular/core\";\n\nexport type KitToastHorizontalPosition = \"center\" | \"left\" | \"right\";\nexport type KitToastVerticalPosition = \"top\" | \"bottom\";\n\nexport class KitToastConfig {\n\tduration?: number = 5000;\n\thorizontalPosition?: KitToastHorizontalPosition = \"center\";\n\tverticalPosition?: KitToastVerticalPosition = \"bottom\";\n}\n\nexport const KIT_TOAST_DEFAULT_CONFIG = new InjectionToken<KitToastConfig>(\n\t\"kit-toast-default-config\",\n\t{\n\t\tprovidedIn: \"root\",\n\t\tfactory: () => new KitToastConfig(),\n\t},\n);\n",
+			"properties": [
+				{
+					"name": "duration",
+					"defaultValue": "5000",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "number",
+					"optional": true,
+					"description": "",
+					"line": 7
+				},
+				{
+					"name": "horizontalPosition",
+					"defaultValue": "\"center\"",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "KitToastHorizontalPosition",
+					"optional": true,
+					"description": "",
+					"line": 8
+				},
+				{
+					"name": "verticalPosition",
+					"defaultValue": "\"bottom\"",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "KitToastVerticalPosition",
+					"optional": true,
+					"description": "",
+					"line": 9
+				}
+			],
+			"methods": [],
+			"indexSignatures": [],
+			"extends": [],
+			"inputsClass": [],
+			"outputsClass": [],
+			"hostBindings": [],
+			"hostListeners": []
+		},
+		{
+			"name": "KitToastRef",
+			"id": "class-KitToastRef-de1836cc4211fac5c7532d2daf32b6fa99d4fa34cddd64788e6fe1eabab26e1aa39498deb2749ad4cfb2bd164313cc0312a183f59f472efcf1eceeaccec171b0",
+			"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-ref.ts",
+			"deprecated": false,
+			"deprecationMessage": "",
+			"type": "class",
+			"sourceCode": "import { OverlayRef } from \"@angular/cdk/overlay\";\n\nconst MAX_TIMEOUT = 2 ** 31 - 1;\n\nexport class KitToastRef {\n\tprivate durationTimeout?: number;\n\n\tconstructor(private readonly overlayRef: OverlayRef) {}\n\n\tdismiss(): void {\n\t\tclearTimeout(this.durationTimeout);\n\t\tthis.overlayRef.dispose();\n\t}\n\n\tdismissAfter(duration: number): void {\n\t\tthis.durationTimeout = window.setTimeout(\n\t\t\t() => this.dismiss(),\n\t\t\tMath.min(duration, MAX_TIMEOUT),\n\t\t);\n\t}\n}\n",
+			"constructorObj": {
+				"name": "constructor",
+				"description": "",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"args": [
+					{
+						"name": "overlayRef",
+						"type": "OverlayRef",
+						"deprecated": false,
+						"deprecationMessage": ""
+					}
+				],
+				"line": 6,
+				"jsdoctags": [
+					{
+						"name": "overlayRef",
+						"type": "OverlayRef",
+						"deprecated": false,
+						"deprecationMessage": "",
+						"tagName": {
+							"text": "param"
+						}
+					}
+				]
+			},
+			"properties": [
+				{
+					"name": "durationTimeout",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "number",
+					"optional": true,
+					"description": "",
+					"line": 6,
+					"modifierKind": [123]
+				}
+			],
+			"methods": [
+				{
+					"name": "dismiss",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 10,
+					"deprecated": false,
+					"deprecationMessage": ""
+				},
+				{
+					"name": "dismissAfter",
+					"args": [
+						{
+							"name": "duration",
+							"type": "number",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 15,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "duration",
+							"type": "number",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				}
+			],
+			"indexSignatures": [],
+			"extends": [],
+			"inputsClass": [],
+			"outputsClass": [],
+			"hostBindings": [],
+			"hostListeners": []
+		}
+	],
+	"directives": [
+		{
+			"name": "KitDialogClose",
+			"id": "directive-KitDialogClose-5cb7cb6c1fa016224cdace7105374629d14667fad1412217e9bef3de7f59cc0296719a1421bc5f577fdef9e96e23727d9e1e6ee0951f9d24b83adcec955c1cde",
+			"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog-close.directive.ts",
+			"type": "directive",
+			"description": "",
+			"rawdescription": "\n",
+			"sourceCode": "import { Dialog, DialogRef } from \"@angular/cdk/dialog\";\nimport { Directive, ElementRef, Input, OnInit, inject } from \"@angular/core\";\n\n@Directive({\n\tstandalone: true,\n\tselector: \"button[kit-dialog-close]\",\n\thost: {\n\t\t\"(click)\": \"_onClick()\",\n\t},\n})\nexport class KitDialogClose implements OnInit {\n\t@Input(\"kit-dialog-close\")\n\tresult: unknown = undefined;\n\n\tdialogRef = inject(DialogRef, { optional: true });\n\tdialog = inject(Dialog, { optional: true });\n\n\tconstructor(private readonly elementRef: ElementRef<HTMLElement>) {}\n\n\tngOnInit(): void {\n\t\tif (!this.dialogRef) {\n\t\t\tthis.dialogRef = this._getClosestReference();\n\t\t}\n\t}\n\n\t_onClick(): void {\n\t\tthis.dialogRef?.close(this.result);\n\t}\n\n\tprivate _getClosestReference(): DialogRef | null {\n\t\tif (!this.dialog) {\n\t\t\treturn null;\n\t\t}\n\n\t\tconst openDialogs = this.dialog.openDialogs;\n\n\t\tlet parent: HTMLElement | null =\n\t\t\tthis.elementRef.nativeElement.parentElement;\n\t\twhile (parent && !parent.classList.contains(\"mat-mdc-dialog-container\")) {\n\t\t\tparent = parent.parentElement;\n\t\t}\n\n\t\treturn parent ? openDialogs.find((d) => d.id === parent?.id) ?? null : null;\n\t}\n}\n",
+			"selector": "button[kit-dialog-close]",
+			"providers": [],
+			"hostDirectives": [],
+			"standalone": true,
+			"inputsClass": [
+				{
+					"name": "kit-dialog-close",
+					"defaultValue": "undefined",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 13,
+					"type": "",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"propertiesClass": [
+				{
+					"name": "dialog",
+					"defaultValue": "inject(Dialog, { optional: true })",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 16
+				},
+				{
+					"name": "dialogRef",
+					"defaultValue": "inject(DialogRef, { optional: true })",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 15
+				}
+			],
+			"methodsClass": [
+				{
+					"name": "_getClosestReference",
+					"args": [],
+					"optional": false,
+					"returnType": "DialogRef | null",
+					"typeParameters": [],
+					"line": 30,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"modifierKind": [123]
+				},
+				{
+					"name": "_onClick",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 26,
+					"deprecated": false,
+					"deprecationMessage": ""
+				},
+				{
+					"name": "ngOnInit",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 20,
+					"deprecated": false,
+					"deprecationMessage": ""
+				}
+			],
+			"extends": [],
+			"implements": ["OnInit"],
+			"constructorObj": {
+				"name": "constructor",
+				"description": "",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"args": [
+					{
+						"name": "elementRef",
+						"type": "ElementRef<HTMLElement>",
+						"deprecated": false,
+						"deprecationMessage": ""
+					}
+				],
+				"line": 16,
+				"jsdoctags": [
+					{
+						"name": "elementRef",
+						"type": "ElementRef<HTMLElement>",
+						"deprecated": false,
+						"deprecationMessage": "",
+						"tagName": {
+							"text": "param"
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "KitFormFieldAction",
+			"id": "directive-KitFormFieldAction-b4f138768a03425cef55fa719dda80a025ceda60f5aa60e2296a8cd9dfd6affcd5115e65d813dc2f68d21f117513e3cab97e5eb6fa01479c89020ceaedb08dc5",
+			"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-action.directive.ts",
+			"type": "directive",
+			"description": "",
+			"rawdescription": "\n",
+			"sourceCode": "import { Directive } from \"@angular/core\";\n\n@Directive({\n\tselector: \"[kitFormFieldAction]\",\n})\nexport class KitFormFieldAction {}\n",
+			"selector": "[kitFormFieldAction]",
+			"providers": [],
+			"hostDirectives": [],
+			"standalone": false,
+			"inputsClass": [],
+			"outputsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"propertiesClass": [],
+			"methodsClass": [],
+			"extends": []
+		},
+		{
+			"name": "KitFormFieldHint",
+			"id": "directive-KitFormFieldHint-68648939bff8044b74f3631c0a0c991ae72ce218606c45e28e95e988980feda85f2215de536912042f17e2ae3173aef64e00cb54fb9ff54f43b31599fb223973",
+			"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-hint.directive.ts",
+			"type": "directive",
+			"description": "",
+			"rawdescription": "\n",
+			"sourceCode": "import { Directive, Input } from \"@angular/core\";\n\n@Directive({\n\tselector: \"kit-form-field-hint\",\n\thost: {\n\t\tclass: \"kit-form-field-message-hint\",\n\t},\n})\nexport class KitFormFieldHint {\n\t@Input()\n\talign: \"start\" | \"end\" = \"start\";\n}\n",
+			"selector": "kit-form-field-hint",
+			"providers": [],
+			"hostDirectives": [],
+			"standalone": false,
+			"inputsClass": [
+				{
+					"name": "align",
+					"defaultValue": "\"start\"",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 11,
+					"type": "\"start\" | \"end\"",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"propertiesClass": [],
+			"methodsClass": [],
+			"extends": []
+		},
+		{
+			"name": "KitFormFieldInput",
+			"id": "directive-KitFormFieldInput-7c8a81128a779353698943e5ecef9c34f47b788e35c4910f7b45cc4fa8af356224a465897152ecdfd9ab3f5b059bf6c1b4204c17d99bcb6fe861865eb97fb95c",
+			"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.directive.ts",
+			"type": "directive",
+			"description": "",
+			"rawdescription": "\n",
+			"sourceCode": "import { Directive, ElementRef, Input, OnChanges, inject } from \"@angular/core\";\nimport { NgControl, ValidationErrors, Validators } from \"@angular/forms\";\nimport { Nullable } from \"../../../core\";\nimport {\n\tInputErrorStateMatcherFn,\n\tdefaultInputErrorStateMatcher,\n} from \"./form-field-input.options\";\n\nlet nextId = 0;\n\n@Directive({\n\tselector:\n\t\t\"input[kitFormFieldInput], textarea[kitFormFieldInput], select[kitFormFieldInput]\",\n\thost: {\n\t\tclass: \"kit-form-field-input\",\n\t\t\"[class.kit-form-field-input--select]\": \"_isSelect\",\n\t\t\"[class.kit-form-field-input--textarea]\": \"_isTextarea\",\n\t\t\"[class.kit-form-field-input--invalid]\": \"invalid\",\n\t\t\"[id]\": \"inputId\",\n\t\t\"[attr.id]\": \"inputId\",\n\t\t\"[enterkeyhint]\": \"mode\",\n\t\t\"[inputmode]\": \"hint\",\n\t\t\"(blur)\": \"setFocused(false)\",\n\t\t\"(focus)\": \"setFocused(true)\",\n\t},\n})\nexport class KitFormFieldInput implements OnChanges {\n\tfocused = false;\n\n\t@Input()\n\ttype: \"text\" | \"email\" | \"password\" | \"tel\" | \"number\" | \"date\" = \"text\";\n\n\t@Input()\n\tmode: Nullable<\"text\" | \"decimal\" | \"numeric\">;\n\n\t@Input()\n\thint: Nullable<\n\t\t\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\"\n\t>;\n\n\t@Input()\n\tid: Nullable<string>;\n\n\t@Input()\n\tstateMatcher: Nullable<InputErrorStateMatcherFn>;\n\n\t_isTextarea: boolean;\n\t_isSelect: boolean;\n\t_uniqueId = `kit-form-field-input-${nextId++}`;\n\n\tprivate readonly ngControl = inject(NgControl, { self: true });\n\n\tget inputId(): string {\n\t\treturn this.id ?? this._uniqueId;\n\t}\n\n\tget empty(): boolean {\n\t\treturn (\n\t\t\t!this.elementRef.nativeElement.value &&\n\t\t\t!this.isBadInput() &&\n\t\t\t!this.isNeverEmpty()\n\t\t);\n\t}\n\n\tget errors(): ValidationErrors | null {\n\t\treturn this.ngControl.errors;\n\t}\n\n\tget disabled(): boolean {\n\t\treturn this.ngControl.disabled ?? false;\n\t}\n\n\tget invalid(): boolean {\n\t\treturn (\n\t\t\tthis.stateMatcher?.(this.ngControl) ??\n\t\t\tdefaultInputErrorStateMatcher(this.ngControl)\n\t\t);\n\t}\n\n\tget pending(): boolean {\n\t\treturn this.ngControl.pending ?? false;\n\t}\n\n\tget required(): boolean {\n\t\treturn this.ngControl.control?.hasValidator(Validators.required) ?? false;\n\t}\n\n\tconstructor(\n\t\tprivate elementRef: ElementRef<\n\t\t\tHTMLInputElement | HTMLSelectElement | HTMLTextAreaElement\n\t\t>,\n\t) {\n\t\tconst element = this.elementRef.nativeElement;\n\t\tconst nodeName = element.nodeName.toLowerCase();\n\n\t\tthis._isTextarea = nodeName === \"textarea\";\n\t\tthis._isSelect = nodeName === \"select\";\n\t}\n\n\tngOnChanges(): void {\n\t\tif (!this._isTextarea && !this._isSelect) {\n\t\t\t(this.elementRef.nativeElement as HTMLInputElement).type = this.type;\n\t\t}\n\t}\n\n\tprivate isNeverEmpty() {\n\t\tconst neverEmptyInputTypes = [\n\t\t\t\"date\",\n\t\t\t\"datetime\",\n\t\t\t\"datetime-local\",\n\t\t\t\"month\",\n\t\t\t\"time\",\n\t\t\t\"week\",\n\t\t];\n\n\t\treturn neverEmptyInputTypes.indexOf(this.type) > -1;\n\t}\n\n\tprivate isBadInput() {\n\t\treturn this.elementRef.nativeElement.validity.badInput;\n\t}\n\n\tsetFocused(focused: boolean): void {\n\t\tthis.focused = focused;\n\t}\n}\n",
+			"selector": "input[kitFormFieldInput], textarea[kitFormFieldInput], select[kitFormFieldInput]",
+			"providers": [],
+			"hostDirectives": [],
+			"standalone": false,
+			"inputsClass": [
+				{
+					"name": "hint",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 37,
+					"type": "Nullable<\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\">",
+					"decorators": []
+				},
+				{
+					"name": "id",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 42,
+					"type": "Nullable<string>",
+					"decorators": []
+				},
+				{
+					"name": "mode",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 34,
+					"type": "Nullable<\"text\" | \"decimal\" | \"numeric\">",
+					"decorators": []
+				},
+				{
+					"name": "stateMatcher",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 45,
+					"type": "Nullable<InputErrorStateMatcherFn>",
+					"decorators": []
+				},
+				{
+					"name": "type",
+					"defaultValue": "\"text\"",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 31,
+					"type": "\"text\" | \"email\" | \"password\" | \"tel\" | \"number\" | \"date\"",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"propertiesClass": [
+				{
+					"name": "_isSelect",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "boolean",
+					"optional": false,
+					"description": "",
+					"line": 48
+				},
+				{
+					"name": "_isTextarea",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "boolean",
+					"optional": false,
+					"description": "",
+					"line": 47
+				},
+				{
+					"name": "_uniqueId",
+					"defaultValue": "`kit-form-field-input-${nextId++}`",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 49
+				},
+				{
+					"name": "focused",
+					"defaultValue": "false",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 28
+				},
+				{
+					"name": "ngControl",
+					"defaultValue": "inject(NgControl, { self: true })",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 51,
+					"modifierKind": [123, 148]
+				}
+			],
+			"methodsClass": [
+				{
+					"name": "isBadInput",
+					"args": [],
+					"optional": false,
+					"returnType": "any",
+					"typeParameters": [],
+					"line": 119,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"modifierKind": [123]
+				},
+				{
+					"name": "isNeverEmpty",
+					"args": [],
+					"optional": false,
+					"returnType": "boolean",
+					"typeParameters": [],
+					"line": 106,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"modifierKind": [123]
+				},
+				{
+					"name": "ngOnChanges",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 100,
+					"deprecated": false,
+					"deprecationMessage": ""
+				},
+				{
+					"name": "setFocused",
+					"args": [
+						{
+							"name": "focused",
+							"type": "boolean",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 123,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "focused",
+							"type": "boolean",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				}
+			],
+			"extends": [],
+			"implements": ["OnChanges"],
+			"constructorObj": {
+				"name": "constructor",
+				"description": "",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"args": [
+					{
+						"name": "elementRef",
+						"type": "ElementRef<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>",
+						"deprecated": false,
+						"deprecationMessage": ""
+					}
+				],
+				"line": 86,
+				"jsdoctags": [
+					{
+						"name": "elementRef",
+						"type": "ElementRef<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>",
+						"deprecated": false,
+						"deprecationMessage": "",
+						"tagName": {
+							"text": "param"
+						}
+					}
+				]
+			},
+			"accessors": {
+				"inputId": {
+					"name": "inputId",
+					"getSignature": {
+						"name": "inputId",
+						"type": "string",
+						"returnType": "string",
+						"line": 53
+					}
+				},
+				"empty": {
+					"name": "empty",
+					"getSignature": {
+						"name": "empty",
+						"type": "boolean",
+						"returnType": "boolean",
+						"line": 57
+					}
+				},
+				"errors": {
+					"name": "errors",
+					"getSignature": {
+						"name": "errors",
+						"type": "",
+						"returnType": "ValidationErrors | null",
+						"line": 65
+					}
+				},
+				"disabled": {
+					"name": "disabled",
+					"getSignature": {
+						"name": "disabled",
+						"type": "boolean",
+						"returnType": "boolean",
+						"line": 69
+					}
+				},
+				"invalid": {
+					"name": "invalid",
+					"getSignature": {
+						"name": "invalid",
+						"type": "boolean",
+						"returnType": "boolean",
+						"line": 73
+					}
+				},
+				"pending": {
+					"name": "pending",
+					"getSignature": {
+						"name": "pending",
+						"type": "boolean",
+						"returnType": "boolean",
+						"line": 80
+					}
+				},
+				"required": {
+					"name": "required",
+					"getSignature": {
+						"name": "required",
+						"type": "boolean",
+						"returnType": "boolean",
+						"line": 84
+					}
+				}
+			}
+		},
+		{
+			"name": "KitRadioGroup",
+			"id": "component-KitRadio-0ef23a9f9c391f2e458e7d875b8427b039a46c3e0f982ad54920e8c55c58435eae5442b76dfde9113c3468d585f1b2ae9f71270c00579c896da3f9a0615ce8d8",
+			"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.ts",
+			"type": "component",
+			"description": "",
+			"rawdescription": "\n",
+			"sourceCode": "import {\n\tAfterContentInit,\n\tComponent,\n\tContentChildren,\n\tDirective,\n\tInjectionToken,\n\tInput,\n\tOnInit,\n\tQueryList,\n\tbooleanAttribute,\n\tforwardRef,\n\tinject,\n} from \"@angular/core\";\nimport { ControlValueAccessor, NG_VALUE_ACCESSOR } from \"@angular/forms\";\nimport { Nullable, OnChangeFn, OnTouchedFn } from \"../../../core\";\n\nexport const KIT_RADIO_GROUP = new InjectionToken<KitRadioGroup>(\n\t\"KitRadioGroup\",\n);\n\nlet nextId = 0;\n\n@Directive({\n\tselector: \"kit-radio-group\",\n\tproviders: [\n\t\t{\n\t\t\tprovide: KIT_RADIO_GROUP,\n\t\t\tuseExisting: KitRadioGroup,\n\t\t},\n\t\t{\n\t\t\tprovide: NG_VALUE_ACCESSOR,\n\t\t\tuseExisting: forwardRef(() => KitRadioGroup),\n\t\t\tmulti: true,\n\t\t},\n\t],\n\thost: {\n\t\tclass: \"kit-radio-group\",\n\t\trole: \"radiogroup\",\n\t},\n})\nexport class KitRadioGroup implements ControlValueAccessor, AfterContentInit {\n\t@ContentChildren(\n\t\tforwardRef(() => KitRadio),\n\t\t{ descendants: true },\n\t)\n\tbuttons?: QueryList<KitRadio>;\n\n\tselected?: KitRadio;\n\n\tonChange: OnChangeFn = (_) => {};\n\tonTouched: OnTouchedFn = () => {};\n\n\tprivate _value: unknown = undefined;\n\tprivate _inputName = `kit-radio-group-${++nextId}`;\n\n\tregisterOnTouched(fn: OnTouchedFn) {\n\t\tthis.onTouched = fn;\n\t}\n\n\tregisterOnChange(fn: OnChangeFn) {\n\t\tthis.onChange = fn;\n\t}\n\n\twriteValue(value: unknown) {\n\t\tthis._value = value;\n\t\tthis._updateSelectedRadioFromValue();\n\t}\n\n\tngAfterContentInit(): void {\n\t\tif (this.buttons) {\n\t\t\tfor (const button of this.buttons) {\n\t\t\t\tbutton.name = this._inputName;\n\t\t\t}\n\t\t}\n\n\t\tthis._updateSelectedRadioFromValue();\n\t}\n\n\tprivate _updateSelectedRadioFromValue(): void {\n\t\tconst isAlreadySelected = this.selected?.value === this._value;\n\t\tif (this.buttons && !isAlreadySelected) {\n\t\t\tthis.selected = undefined;\n\n\t\t\tfor (const button of this.buttons) {\n\t\t\t\tbutton.checked = button.value === this._value;\n\t\t\t\tif (button.checked) {\n\t\t\t\t\tthis.selected = button;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\n@Component({\n\tselector: \"kit-radio\",\n\ttemplateUrl: \"./radio.component.html\",\n})\nexport class KitRadio implements OnInit {\n\t@Input({ required: true })\n\tvalue: unknown;\n\n\t@Input({ transform: booleanAttribute })\n\treversed = false;\n\n\t@Input()\n\tid: Nullable<string>;\n\n\tname: Nullable<string>;\n\tchecked = false;\n\n\tprivate readonly group = inject(KIT_RADIO_GROUP, { optional: true });\n\tprivate _uniqueId = `kit-radio-${nextId++}`;\n\n\tngOnInit(): void {\n\t\tif (!this.group) {\n\t\t\tthrow new Error(\"cannot use kit-radio outside kit-radio-group\");\n\t\t}\n\t}\n\n\t_onValueChanged(event: Event): void {\n\t\tevent.stopPropagation();\n\t\tthis.group?.onChange(this.value);\n\t}\n\n\tget inputId(): string {\n\t\treturn this.id ?? this._uniqueId;\n\t}\n}\n",
+			"selector": "kit-radio-group",
+			"providers": [
+				{
+					"name": "{\n    provide: KIT_RADIO_GROUP, useExisting: KitRadioGroup,\n}"
+				},
+				{
+					"name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => KitRadioGroup), multi: true,\n}"
+				}
+			],
+			"hostDirectives": [],
+			"standalone": false,
+			"inputsClass": [],
+			"outputsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"propertiesClass": [
+				{
+					"name": "_inputName",
+					"defaultValue": "`kit-radio-group-${++nextId}`",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 54,
+					"modifierKind": [123]
+				},
+				{
+					"name": "_value",
+					"defaultValue": "undefined",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 53,
+					"modifierKind": [123]
+				},
+				{
+					"name": "buttons",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "QueryList<KitRadio>",
+					"optional": true,
+					"description": "",
+					"line": 46,
+					"decorators": [
+						{
+							"name": "ContentChildren",
+							"stringifiedArguments": "undefined, {descendants: true}"
+						}
+					],
+					"modifierKind": [170]
+				},
+				{
+					"name": "onChange",
+					"defaultValue": "() => {...}",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "OnChangeFn",
+					"optional": false,
+					"description": "",
+					"line": 50
+				},
+				{
+					"name": "onTouched",
+					"defaultValue": "() => {...}",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "OnTouchedFn",
+					"optional": false,
+					"description": "",
+					"line": 51
+				},
+				{
+					"name": "selected",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "KitRadio",
+					"optional": true,
+					"description": "",
+					"line": 48
+				}
+			],
+			"methodsClass": [
+				{
+					"name": "_updateSelectedRadioFromValue",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 79,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"modifierKind": [123]
+				},
+				{
+					"name": "ngAfterContentInit",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 69,
+					"deprecated": false,
+					"deprecationMessage": ""
+				},
+				{
+					"name": "registerOnChange",
+					"args": [
+						{
+							"name": "fn",
+							"type": "OnChangeFn",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 60,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "fn",
+							"type": "OnChangeFn",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "registerOnTouched",
+					"args": [
+						{
+							"name": "fn",
+							"type": "OnTouchedFn",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 56,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "fn",
+							"type": "OnTouchedFn",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "writeValue",
+					"args": [
+						{
+							"name": "value",
+							"type": "",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 64,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "value",
+							"type": "",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				}
+			],
+			"extends": [],
+			"implements": ["ControlValueAccessor", "AfterContentInit"]
+		}
+	],
+	"components": [
+		{
+			"name": "KitButton",
+			"id": "component-KitButton-9f05d591bcbc04ba77bfd55ca81183a61112adea547e0d9342b09af19a911ef4fb6955ada81426137a2663f9f4ea21c42ef7056a63a4a68ca9f8a825d9a7ae41",
+			"file": "projects/ngx-kit/src/lib/components/action/button/button.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"host": {},
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "button[kit-button]",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./button.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [
+				{
+					"required": false,
+					"name": "disabled",
+					"defaultValue": "false",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 24,
+					"type": "boolean",
+					"decorators": []
+				},
+				{
+					"required": false,
+					"name": "loading",
+					"defaultValue": "false",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 27,
+					"type": "boolean",
+					"decorators": []
+				},
+				{
+					"name": "variant",
+					"defaultValue": "\"primary\"",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 20,
+					"type": "\"primary\" | \"secondary\" | \"tertiary\" | \"underline\" | \"ghost\"",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"propertiesClass": [],
+			"methodsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": true,
+			"imports": [
+				{
+					"name": "KitSpinner"
+				}
+			],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { Component, Input, booleanAttribute } from \"@angular/core\";\nimport { KitSpinner } from \"../../indicator\";\n\n@Component({\n\tstandalone: true,\n\t// eslint-disable-next-line @angular-eslint/component-selector\n\tselector: \"button[kit-button]\",\n\ttemplateUrl: \"./button.component.html\",\n\timports: [KitSpinner],\n\thost: {\n\t\t\"[disabled]\": \"disabled || loading\",\n\t\t\"[attr.aria-disabled]\": \"disabled\",\n\t\t\"[attr.role]\": '\"button\"',\n\t\t\"[class]\": '\"kit-button kit-button_variant--\" + variant',\n\t\t\"[class.kit-button--loading]\": \"loading\",\n\t},\n})\nexport class KitButton {\n\t@Input()\n\tvariant: \"primary\" | \"secondary\" | \"tertiary\" | \"underline\" | \"ghost\" =\n\t\t\"primary\";\n\n\t@Input({ transform: booleanAttribute })\n\tdisabled = false;\n\n\t@Input({ transform: booleanAttribute })\n\tloading = false;\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"templateData": "<ng-content/>\n<ng-content select=\"kit-icon\"/>\n@if (loading) {\n  <div class=\"kit-button-spinner\">\n    <kit-spinner size=\"small\"/>\n  </div>\n}\n"
+		},
+		{
+			"name": "KitCheckbox",
+			"id": "component-KitCheckbox-dfd8f2cfda5fb5b091715b1ae05699f7ca1326c08c5390ccd6223bc31aa335c17b62edaac4f1438e6fa0efc4588b9330689de8e61f5fbcd842066f5f87ae7a81",
+			"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [
+				{
+					"name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => KitCheckbox), multi: true,\n}"
+				}
+			],
+			"selector": "kit-checkbox",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./checkbox.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [
+				{
+					"name": "id",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 29,
+					"type": "Nullable<string>",
+					"decorators": []
+				},
+				{
+					"required": false,
+					"name": "required",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 32,
+					"type": "Nullable<boolean>",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"propertiesClass": [
+				{
+					"name": "_uniqueId",
+					"defaultValue": "`kit-checkbox-${nextId++}`",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 23,
+					"modifierKind": [123]
+				},
+				{
+					"name": "checked",
+					"defaultValue": "false",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 20
+				},
+				{
+					"name": "disabled",
+					"defaultValue": "false",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 21
+				},
+				{
+					"name": "onChange",
+					"defaultValue": "() => {...}",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "OnChangeFn<boolean>",
+					"optional": false,
+					"description": "",
+					"line": 25
+				},
+				{
+					"name": "onTouch",
+					"defaultValue": "() => {...}",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "OnTouchedFn",
+					"optional": false,
+					"description": "",
+					"line": 26
+				}
+			],
+			"methodsClass": [
+				{
+					"name": "registerOnChange",
+					"args": [
+						{
+							"name": "fn",
+							"type": "OnChangeFn",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 51,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "fn",
+							"type": "OnChangeFn",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "registerOnTouched",
+					"args": [
+						{
+							"name": "fn",
+							"type": "OnTouchedFn",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 55,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "fn",
+							"type": "OnTouchedFn",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "setDisabledState",
+					"args": [
+						{
+							"name": "isDisabled",
+							"type": "boolean",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 47,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "isDisabled",
+							"type": "boolean",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "toggle",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 38,
+					"deprecated": false,
+					"deprecationMessage": ""
+				},
+				{
+					"name": "writeValue",
+					"args": [
+						{
+							"name": "value",
+							"type": "",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 43,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "value",
+							"type": "",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				}
+			],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": true,
+			"imports": [],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { Component, Input, booleanAttribute, forwardRef } from \"@angular/core\";\nimport { ControlValueAccessor, NG_VALUE_ACCESSOR } from \"@angular/forms\";\nimport { Nullable, OnChangeFn, OnTouchedFn } from \"../../../core\";\n\nlet nextId = 0;\n\n@Component({\n\tstandalone: true,\n\tselector: \"kit-checkbox\",\n\ttemplateUrl: \"./checkbox.component.html\",\n\tproviders: [\n\t\t{\n\t\t\tprovide: NG_VALUE_ACCESSOR,\n\t\t\tuseExisting: forwardRef(() => KitCheckbox),\n\t\t\tmulti: true,\n\t\t},\n\t],\n})\nexport class KitCheckbox implements ControlValueAccessor {\n\tchecked = false;\n\tdisabled = false;\n\n\tprivate _uniqueId = `kit-checkbox-${nextId++}`;\n\n\tonChange: OnChangeFn<boolean> = (_) => {};\n\tonTouch: OnTouchedFn = () => {};\n\n\t@Input()\n\tid: Nullable<string>;\n\n\t@Input({ transform: booleanAttribute })\n\trequired: Nullable<boolean>;\n\n\tget inputId(): string {\n\t\treturn this.id ?? this._uniqueId;\n\t}\n\n\ttoggle(): void {\n\t\tthis.checked = !this.checked;\n\t\tthis.onChange(this.checked);\n\t}\n\n\twriteValue(value: unknown): void {\n\t\tthis.checked = !!value;\n\t}\n\n\tsetDisabledState(isDisabled: boolean) {\n\t\tthis.disabled = isDisabled;\n\t}\n\n\tregisterOnChange(fn: OnChangeFn): void {\n\t\tthis.onChange = fn;\n\t}\n\n\tregisterOnTouched(fn: OnTouchedFn): void {\n\t\tthis.onTouch = fn;\n\t}\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"implements": ["ControlValueAccessor"],
+			"accessors": {
+				"inputId": {
+					"name": "inputId",
+					"getSignature": {
+						"name": "inputId",
+						"type": "string",
+						"returnType": "string",
+						"line": 34
+					}
+				}
+			},
+			"templateData": "<div class=\"kit-checkbox\" [class.kit-checkbox--disabled]=\"disabled\">\n    <input\n        class=\"kit-checkbox-input\"\n        role=\"checkbox\"\n        type=\"checkbox\"\n        [attr.aria-checked]=\"checked\"\n        [attr.aria-disabled]=\"disabled\"\n        [checked]=\"checked\"\n        [disabled]=\"disabled\"\n        [id]=\"inputId\"\n        (change)=\"toggle()\"\n    />\n    <label class=\"kit-checkbox-label\" [for]=\"inputId\">\n        <ng-content />\n        @if (required) {\n            <span aria-hidden=\"true\" class=\"kit-checkbox-label-required\"> * </span>\n        }\n    </label>\n</div>\n"
+		},
+		{
+			"name": "KitDialog",
+			"id": "component-KitDialog-f0f4970bb12eec82c06f7a167db203b072130b9767f2dc7dbdb26853c6881ec08850a643fbcbaa57b8ee507ea2ae40b5019e1f8de5742eda465bfbcb1dcd26c7",
+			"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "kit-dialog",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./dialog.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [],
+			"outputsClass": [],
+			"propertiesClass": [],
+			"methodsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": true,
+			"imports": [],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { Component } from \"@angular/core\";\n\nexport * from \"./dialog-close.directive\";\nexport * from \"./dialog-ref\";\nexport * from \"./dialog.service\";\n\n@Component({\n\tstandalone: true,\n\tselector: \"kit-dialog\",\n\ttemplateUrl: \"./dialog.component.html\",\n})\nexport class KitDialog {}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"templateData": "<div class=\"kit-dialog\">\n    <div class=\"kit-dialog-title\">\n        <ng-content select=\"span[kit-dialog-title]\" />\n        <ng-content select=\"button[kit-dialog-close-button]\" />\n    </div>\n    <div class=\"kit-dialog-content\">\n        <ng-content />\n        <div class=\"kit-dialog-content-actions\">\n            <ng-content select=\"[kit-dialog-action]\" />\n        </div>\n    </div>\n</div>\n"
+		},
+		{
+			"name": "KitFormField",
+			"id": "component-KitFormField-3314bbb008077bdcd937e839a48fb822f54925ebaee3b267aa66f0110127f2ef83f6eb48342bf33ac3197e87e74b1b2028551acaaa993298a4f614be4897b3c2",
+			"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "kit-form-field",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./form-field.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [],
+			"outputsClass": [],
+			"propertiesClass": [
+				{
+					"name": "action",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "KitFormFieldAction",
+					"optional": true,
+					"description": "",
+					"line": 25,
+					"decorators": [
+						{
+							"name": "ContentChild",
+							"stringifiedArguments": "KitFormFieldAction"
+						}
+					],
+					"modifierKind": [170]
+				},
+				{
+					"name": "errors",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "QueryList<KitFormFieldErrorComponent>",
+					"optional": true,
+					"description": "",
+					"line": 28,
+					"decorators": [
+						{
+							"name": "ContentChildren",
+							"stringifiedArguments": "KitFormFieldErrorComponent, {descendants: true}"
+						}
+					],
+					"modifierKind": [170]
+				},
+				{
+					"name": "hint",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "KitFormFieldHint",
+					"optional": true,
+					"description": "",
+					"line": 22,
+					"decorators": [
+						{
+							"name": "ContentChild",
+							"stringifiedArguments": "KitFormFieldHint"
+						}
+					],
+					"modifierKind": [170]
+				},
+				{
+					"name": "input",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "KitFormFieldInput",
+					"optional": false,
+					"description": "",
+					"line": 19,
+					"decorators": [
+						{
+							"name": "ContentChild",
+							"stringifiedArguments": "KitFormFieldInput, {static: true}"
+						}
+					],
+					"modifierKind": [170]
+				}
+			],
+			"methodsClass": [
+				{
+					"name": "getDisplayedMessage",
+					"args": [],
+					"optional": false,
+					"returnType": "\"error\" | \"hint\"",
+					"typeParameters": [],
+					"line": 39,
+					"deprecated": false,
+					"deprecationMessage": ""
+				},
+				{
+					"name": "getErrorMessage",
+					"args": [],
+					"optional": false,
+					"returnType": "TemplateRef | null",
+					"typeParameters": [],
+					"line": 45,
+					"deprecated": false,
+					"deprecationMessage": ""
+				},
+				{
+					"name": "shouldDisplayMessage",
+					"args": [],
+					"optional": false,
+					"returnType": "boolean",
+					"typeParameters": [],
+					"line": 30,
+					"deprecated": false,
+					"deprecationMessage": ""
+				}
+			],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": false,
+			"imports": [],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import {\n\tComponent,\n\tContentChild,\n\tContentChildren,\n\tQueryList,\n\tTemplateRef,\n} from \"@angular/core\";\nimport { KitFormFieldErrorComponent } from \"./error/form-field-error.component\";\nimport { KitFormFieldAction } from \"./form-field-action.directive\";\nimport { KitFormFieldHint } from \"./form-field-hint.directive\";\nimport { KitFormFieldInput } from \"./form-field-input.directive\";\n\n@Component({\n\tselector: \"kit-form-field\",\n\ttemplateUrl: \"./form-field.component.html\",\n})\nexport class KitFormField {\n\t@ContentChild(KitFormFieldInput, { static: true })\n\tinput!: KitFormFieldInput;\n\n\t@ContentChild(KitFormFieldHint)\n\thint?: KitFormFieldHint;\n\n\t@ContentChild(KitFormFieldAction)\n\taction?: KitFormFieldAction;\n\n\t@ContentChildren(KitFormFieldErrorComponent, { descendants: true })\n\terrors?: QueryList<KitFormFieldErrorComponent>;\n\n\tshouldDisplayMessage(): boolean {\n\t\tif (this.hint) return true;\n\n\t\tconst keys = Object.keys(this.input.errors ?? {});\n\t\tif (keys.length === 0) return false;\n\n\t\treturn this.errors?.some((e) => e.type === keys[0]) ?? false;\n\t}\n\n\tgetDisplayedMessage(): \"error\" | \"hint\" {\n\t\treturn this.errors && this.errors.length > 0 && this.input.invalid\n\t\t\t? \"error\"\n\t\t\t: \"hint\";\n\t}\n\n\tgetErrorMessage(): TemplateRef<KitFormFieldErrorComponent> | null {\n\t\tconst keys = Object.keys(this.input.errors ?? {});\n\t\tif (keys.length === 0) {\n\t\t\treturn null;\n\t\t}\n\n\t\tconst error = this.errors?.find((e) => e.type === keys[0]);\n\t\treturn error?.templateRef ?? null;\n\t}\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"templateData": "<label\n  class=\"kit-form-field-label\"\n  [for]=\"input.inputId\"\n>\n  <ng-content/>\n  @if (input.required) {\n    <span aria-hidden=\"true\" class=\"kit-form-field-label-required\"> * </span>\n  }\n</label>\n<div class=\"kit-form-field\" [class.kit-form-field--select]=\"input._isSelect\">\n  <ng-content select=\"[kitFormFieldInput]\"/>\n  @if (action || input.pending) {\n    <div class=\"kit-form-field-action\">\n      @if (input.pending) {\n        <kit-spinner size=\"small\"/>\n      } @else {\n        <ng-content select=\"[kitFormFieldAction]\"/>\n      }\n    </div>\n  }\n</div>\n@if (shouldDisplayMessage()) {\n  <div class=\"kit-form-field-message\">\n    @switch (getDisplayedMessage()) {\n      @case ('hint') {\n        <ng-content select=\"kit-form-field-hint\"/>\n      }\n      @case ('error') {\n        <ng-container [ngTemplateOutlet]=\"getErrorMessage()\"/>\n      }\n    }\n  </div>\n}\n<ng-content select=\"kit-form-field-error\"/>\n"
+		},
+		{
+			"name": "KitFormFieldErrorComponent",
+			"id": "component-KitFormFieldErrorComponent-5db382446a80557df5a04717803016147b3e67d9769af3745dae1e420a38f07a03dd57c7f5838cd2048657115449c8eb8d68cb19b79fca045341fb19eb1b833f",
+			"file": "projects/ngx-kit/src/lib/components/form/form-field/error/form-field-error.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "kit-form-field-error",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./form-field-error.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [
+				{
+					"required": true,
+					"name": "type",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"optional": false,
+					"line": 12,
+					"type": "string",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"propertiesClass": [
+				{
+					"name": "templateRef",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "TemplateRef<KitFormFieldErrorComponent>",
+					"optional": true,
+					"description": "",
+					"line": 9,
+					"decorators": [
+						{
+							"name": "ViewChild",
+							"stringifiedArguments": "'templateRef'"
+						}
+					],
+					"modifierKind": [170]
+				}
+			],
+			"methodsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": false,
+			"imports": [],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { Component, Input, TemplateRef, ViewChild } from \"@angular/core\";\n\n@Component({\n\tselector: \"kit-form-field-error\",\n\ttemplateUrl: \"./form-field-error.component.html\",\n})\nexport class KitFormFieldErrorComponent {\n\t@ViewChild(\"templateRef\")\n\ttemplateRef?: TemplateRef<KitFormFieldErrorComponent>;\n\n\t@Input({ required: true })\n\ttype!: string;\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"templateData": "<ng-template #templateRef>\n    <span aria-atomic=\"true\" class=\"kit-form-field-message-error\">\n        <ng-content />\n    </span>\n</ng-template>\n"
+		},
+		{
+			"name": "KitIcon",
+			"id": "component-KitIcon-59fff428bdecfac074fe281eb8db9e27e5d8d0f86e139010a1f9054029588e9f59d4bbc45294e714b410c2f14a2917325f46a5c99278be627c1cf6e7cff26ae4",
+			"file": "projects/ngx-kit/src/lib/components/icon/icon.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "kit-icon",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./icon.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [
+				{
+					"required": true,
+					"name": "name",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"optional": false,
+					"line": 12,
+					"type": "string",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"propertiesClass": [],
+			"methodsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": true,
+			"imports": [
+				{
+					"name": "NgStyle"
+				}
+			],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { NgStyle } from \"@angular/common\";\nimport { Component, Input } from \"@angular/core\";\n\n@Component({\n\tstandalone: true,\n\tselector: \"kit-icon\",\n\ttemplateUrl: \"./icon.component.html\",\n\timports: [NgStyle],\n})\nexport class KitIcon {\n\t@Input({ required: true })\n\tname!: string;\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"templateData": "<i class=\"ri-{{ name }}\"></i>\n"
+		},
+		{
+			"name": "KitIconButton",
+			"id": "component-KitIconButton-2f61ec4ab3fc1af3489d7b5b191fd341ec6ad1354d6b0332d7021feaabc69fcfce3dea4db59b2df2f78facf1f0695cd563348ae3848e89807374a14df37ce587",
+			"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"host": {},
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "button[kit-icon-button]",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./icon-button.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [
+				{
+					"required": false,
+					"name": "disabled",
+					"defaultValue": "false",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 20,
+					"type": "boolean",
+					"decorators": []
+				},
+				{
+					"name": "variant",
+					"defaultValue": "\"default\"",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 17,
+					"type": "\"primary\" | \"secondary\" | \"default\"",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"propertiesClass": [],
+			"methodsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": true,
+			"imports": [],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { Component, Input, booleanAttribute } from \"@angular/core\";\n\n@Component({\n\tstandalone: true,\n\t// eslint-disable-next-line @angular-eslint/component-selector\n\tselector: \"button[kit-icon-button]\",\n\ttemplateUrl: \"./icon-button.component.html\",\n\thost: {\n\t\t\"[disabled]\": \"disabled\",\n\t\t\"[attr.aria-disabled]\": \"disabled\",\n\t\t\"[attr.role]\": '\"button\"',\n\t\t\"[class]\": '\"kit-icon-button kit-icon-button_variant--\" + variant',\n\t},\n})\nexport class KitIconButton {\n\t@Input()\n\tvariant: \"primary\" | \"secondary\" | \"default\" = \"default\";\n\n\t@Input({ transform: booleanAttribute })\n\tdisabled = false;\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"templateData": "<ng-content />\n"
+		},
+		{
+			"name": "KitRadio",
+			"id": "component-KitRadio-0ef23a9f9c391f2e458e7d875b8427b039a46c3e0f982ad54920e8c55c58435eae5442b76dfde9113c3468d585f1b2ae9f71270c00579c896da3f9a0615ce8d8",
+			"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "kit-radio",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./radio.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [
+				{
+					"name": "id",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 106,
+					"type": "Nullable<string>",
+					"decorators": []
+				},
+				{
+					"required": false,
+					"name": "reversed",
+					"defaultValue": "false",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 103,
+					"type": "boolean",
+					"decorators": []
+				},
+				{
+					"required": true,
+					"name": "value",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"optional": false,
+					"line": 100,
+					"type": "",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"propertiesClass": [
+				{
+					"name": "_uniqueId",
+					"defaultValue": "`kit-radio-${nextId++}`",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 112,
+					"modifierKind": [123]
+				},
+				{
+					"name": "checked",
+					"defaultValue": "false",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 109
+				},
+				{
+					"name": "group",
+					"defaultValue": "inject(KIT_RADIO_GROUP, { optional: true })",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 111,
+					"modifierKind": [123, 148]
+				},
+				{
+					"name": "name",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Nullable<string>",
+					"optional": false,
+					"description": "",
+					"line": 108
+				}
+			],
+			"methodsClass": [
+				{
+					"name": "_onValueChanged",
+					"args": [
+						{
+							"name": "event",
+							"type": "Event",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 120,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "event",
+							"type": "Event",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "ngOnInit",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 114,
+					"deprecated": false,
+					"deprecationMessage": ""
+				}
+			],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": false,
+			"imports": [],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import {\n\tAfterContentInit,\n\tComponent,\n\tContentChildren,\n\tDirective,\n\tInjectionToken,\n\tInput,\n\tOnInit,\n\tQueryList,\n\tbooleanAttribute,\n\tforwardRef,\n\tinject,\n} from \"@angular/core\";\nimport { ControlValueAccessor, NG_VALUE_ACCESSOR } from \"@angular/forms\";\nimport { Nullable, OnChangeFn, OnTouchedFn } from \"../../../core\";\n\nexport const KIT_RADIO_GROUP = new InjectionToken<KitRadioGroup>(\n\t\"KitRadioGroup\",\n);\n\nlet nextId = 0;\n\n@Directive({\n\tselector: \"kit-radio-group\",\n\tproviders: [\n\t\t{\n\t\t\tprovide: KIT_RADIO_GROUP,\n\t\t\tuseExisting: KitRadioGroup,\n\t\t},\n\t\t{\n\t\t\tprovide: NG_VALUE_ACCESSOR,\n\t\t\tuseExisting: forwardRef(() => KitRadioGroup),\n\t\t\tmulti: true,\n\t\t},\n\t],\n\thost: {\n\t\tclass: \"kit-radio-group\",\n\t\trole: \"radiogroup\",\n\t},\n})\nexport class KitRadioGroup implements ControlValueAccessor, AfterContentInit {\n\t@ContentChildren(\n\t\tforwardRef(() => KitRadio),\n\t\t{ descendants: true },\n\t)\n\tbuttons?: QueryList<KitRadio>;\n\n\tselected?: KitRadio;\n\n\tonChange: OnChangeFn = (_) => {};\n\tonTouched: OnTouchedFn = () => {};\n\n\tprivate _value: unknown = undefined;\n\tprivate _inputName = `kit-radio-group-${++nextId}`;\n\n\tregisterOnTouched(fn: OnTouchedFn) {\n\t\tthis.onTouched = fn;\n\t}\n\n\tregisterOnChange(fn: OnChangeFn) {\n\t\tthis.onChange = fn;\n\t}\n\n\twriteValue(value: unknown) {\n\t\tthis._value = value;\n\t\tthis._updateSelectedRadioFromValue();\n\t}\n\n\tngAfterContentInit(): void {\n\t\tif (this.buttons) {\n\t\t\tfor (const button of this.buttons) {\n\t\t\t\tbutton.name = this._inputName;\n\t\t\t}\n\t\t}\n\n\t\tthis._updateSelectedRadioFromValue();\n\t}\n\n\tprivate _updateSelectedRadioFromValue(): void {\n\t\tconst isAlreadySelected = this.selected?.value === this._value;\n\t\tif (this.buttons && !isAlreadySelected) {\n\t\t\tthis.selected = undefined;\n\n\t\t\tfor (const button of this.buttons) {\n\t\t\t\tbutton.checked = button.value === this._value;\n\t\t\t\tif (button.checked) {\n\t\t\t\t\tthis.selected = button;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\n@Component({\n\tselector: \"kit-radio\",\n\ttemplateUrl: \"./radio.component.html\",\n})\nexport class KitRadio implements OnInit {\n\t@Input({ required: true })\n\tvalue: unknown;\n\n\t@Input({ transform: booleanAttribute })\n\treversed = false;\n\n\t@Input()\n\tid: Nullable<string>;\n\n\tname: Nullable<string>;\n\tchecked = false;\n\n\tprivate readonly group = inject(KIT_RADIO_GROUP, { optional: true });\n\tprivate _uniqueId = `kit-radio-${nextId++}`;\n\n\tngOnInit(): void {\n\t\tif (!this.group) {\n\t\t\tthrow new Error(\"cannot use kit-radio outside kit-radio-group\");\n\t\t}\n\t}\n\n\t_onValueChanged(event: Event): void {\n\t\tevent.stopPropagation();\n\t\tthis.group?.onChange(this.value);\n\t}\n\n\tget inputId(): string {\n\t\treturn this.id ?? this._uniqueId;\n\t}\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"implements": ["OnInit"],
+			"accessors": {
+				"inputId": {
+					"name": "inputId",
+					"getSignature": {
+						"name": "inputId",
+						"type": "string",
+						"returnType": "string",
+						"line": 125
+					}
+				}
+			},
+			"templateData": "<div class=\"kit-radio\" [ngClass]=\"{ reversed: reversed }\">\n    <input\n        class=\"kit-radio-input\"\n        role=\"radio\"\n        type=\"radio\"\n        [attr.aria-checked]=\"checked\"\n        [checked]=\"checked\"\n        [id]=\"inputId\"\n        [name]=\"name\"\n        [value]=\"value\"\n        (change)=\"_onValueChanged($event)\"\n    />\n    <label class=\"kit-radio-label\" [for]=\"inputId\">\n        <ng-content />\n    </label>\n</div>\n"
+		},
+		{
+			"name": "KitSimpleToast",
+			"id": "component-KitSimpleToast-cd141baf6da97e8c68a61fa3eb9a127ff6c7ab0dc1981f0b9eb50bbd8ce08c6cb9a3d709bbda16f08bdbf3bb948b38ebebad6c7ce09ad26da7e18f0fd9f4eabf",
+			"file": "projects/ngx-kit/src/lib/components/overlay/toast/simple-toast/simple-toast.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "kit-simple-toast",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./simple-toast.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [],
+			"outputsClass": [],
+			"propertiesClass": [
+				{
+					"name": "data",
+					"defaultValue": "inject(KIT_TOAST_DATA)",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 12,
+					"modifierKind": [148]
+				}
+			],
+			"methodsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": true,
+			"imports": [
+				{
+					"name": "forwardRef(() => KitToast)"
+				}
+			],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { Component, forwardRef, inject } from \"@angular/core\";\nimport { KIT_TOAST_DATA } from \"../toast-data\";\nimport { KitToast } from \"../toast.component\";\n\n@Component({\n\tstandalone: true,\n\tselector: \"kit-simple-toast\",\n\ttemplateUrl: \"./simple-toast.component.html\",\n\timports: [forwardRef(() => KitToast)],\n})\nexport class KitSimpleToast {\n\treadonly data = inject(KIT_TOAST_DATA);\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"templateData": "<kit-toast [icon]=\"data.icon\" [type]=\"data.type\">\n    {{ data.content }}\n</kit-toast>\n"
+		},
+		{
+			"name": "KitSpinner",
+			"id": "component-KitSpinner-3aa6bf7c2d7f4f43feef9c247a29ec6f7c17e2f7dd59337f2a6c93eeeb7a9fb42fa5e7e612783537423d1b4e6ffb67baa5d294af5d8034e3aa5d018ca3366188",
+			"file": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "kit-spinner",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./spinner.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [
+				{
+					"name": "size",
+					"defaultValue": "\"medium\"",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 10,
+					"type": "\"small\" | \"medium\" | \"large\"",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"propertiesClass": [],
+			"methodsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": true,
+			"imports": [],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { Component, Input } from \"@angular/core\";\n\n@Component({\n\tstandalone: true,\n\tselector: \"kit-spinner\",\n\ttemplateUrl: \"./spinner.component.html\",\n})\nexport class KitSpinner {\n\t@Input()\n\tsize: \"small\" | \"medium\" | \"large\" = \"medium\";\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"templateData": "<div class=\"kit-spinner kit-spinner_size--{{ size }}\"></div>\n"
+		},
+		{
+			"name": "KitToast",
+			"id": "component-KitToast-434356b4ad4bf020b0596f2f8a3d1e5dd97a2ef834b1834b463714e3b91264fadd79794015f8633d4cb3fc5dbc48b015e2419cdf4a6515d56e0856f5fc58adbf",
+			"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "kit-toast",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./toast.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [
+				{
+					"name": "icon",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 23,
+					"type": "string",
+					"decorators": []
+				},
+				{
+					"name": "type",
+					"defaultValue": "\"primary\"",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 20,
+					"type": "KitToastType",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"propertiesClass": [],
+			"methodsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": true,
+			"imports": [
+				{
+					"name": "KitIcon"
+				}
+			],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { Component, Input } from \"@angular/core\";\nimport { KitIcon } from \"../../icon\";\n\nexport * from \"./simple-toast/simple-toast.component\";\nexport * from \"./toast-config\";\nexport * from \"./toast-data\";\nexport * from \"./toast-ref\";\nexport * from \"./toast.service\";\n\nexport type KitToastType = \"primary\" | \"validation\" | \"warning\" | \"error\";\n\n@Component({\n\tstandalone: true,\n\tselector: \"kit-toast\",\n\ttemplateUrl: \"./toast.component.html\",\n\timports: [KitIcon],\n})\nexport class KitToast {\n\t@Input()\n\ttype: KitToastType = \"primary\";\n\n\t@Input()\n\ticon?: string;\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"templateData": "<div class=\"kit-toast kit-toast_type--{{ type }}\" role=\"alert\">\n    @if (icon) {\n        <kit-icon class=\"kit-toast-icon\" [name]=\"icon\" />\n    }\n    <div class=\"kit-toast-content\">\n        <ng-content select=\"span[kit-toast-title]\" />\n        <ng-content />\n    </div>\n</div>\n"
+		},
+		{
+			"name": "KitToggle",
+			"id": "component-KitToggle-40084a1cc7b3a33ba427066ebfdfcdb697d2aa88a4e13ee8ea38ecea34a191661c4a438da08d4d148081baaecdf2b582882827feb59a453f295d63be96730f49",
+			"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [
+				{
+					"name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => KitToggle), multi: true,\n}"
+				}
+			],
+			"selector": "kit-toggle",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./toggle.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [
+				{
+					"name": "id",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"line": 29,
+					"type": "Nullable<string>",
+					"decorators": []
+				}
+			],
+			"outputsClass": [],
+			"propertiesClass": [
+				{
+					"name": "_uniqueId",
+					"defaultValue": "`kit-toggle-input-${nextId++}`",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 23,
+					"modifierKind": [123]
+				},
+				{
+					"name": "checked",
+					"defaultValue": "false",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 20
+				},
+				{
+					"name": "disabled",
+					"defaultValue": "false",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"optional": false,
+					"description": "",
+					"line": 21
+				},
+				{
+					"name": "onChange",
+					"defaultValue": "() => {...}",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "OnChangeFn<boolean>",
+					"optional": false,
+					"description": "",
+					"line": 25
+				},
+				{
+					"name": "onTouch",
+					"defaultValue": "() => {...}",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "OnTouchedFn",
+					"optional": false,
+					"description": "",
+					"line": 26
+				}
+			],
+			"methodsClass": [
+				{
+					"name": "registerOnChange",
+					"args": [
+						{
+							"name": "fn",
+							"type": "OnChangeFn",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 48,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "fn",
+							"type": "OnChangeFn",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "registerOnTouched",
+					"args": [
+						{
+							"name": "fn",
+							"type": "OnTouchedFn",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 52,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "fn",
+							"type": "OnTouchedFn",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "setDisabledState",
+					"args": [
+						{
+							"name": "isDisabled",
+							"type": "boolean",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 40,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "isDisabled",
+							"type": "boolean",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				},
+				{
+					"name": "toggle",
+					"args": [],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 35,
+					"deprecated": false,
+					"deprecationMessage": ""
+				},
+				{
+					"name": "writeValue",
+					"args": [
+						{
+							"name": "value",
+							"type": "",
+							"deprecated": false,
+							"deprecationMessage": ""
+						}
+					],
+					"optional": false,
+					"returnType": "void",
+					"typeParameters": [],
+					"line": 44,
+					"deprecated": false,
+					"deprecationMessage": "",
+					"jsdoctags": [
+						{
+							"name": "value",
+							"type": "",
+							"deprecated": false,
+							"deprecationMessage": "",
+							"tagName": {
+								"text": "param"
+							}
+						}
+					]
+				}
+			],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": true,
+			"imports": [],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { Component, Input, forwardRef } from \"@angular/core\";\nimport { ControlValueAccessor, NG_VALUE_ACCESSOR } from \"@angular/forms\";\nimport { Nullable, OnChangeFn, OnTouchedFn } from \"../../../core\";\n\nlet nextId = 0;\n\n@Component({\n\tstandalone: true,\n\tselector: \"kit-toggle\",\n\ttemplateUrl: \"./toggle.component.html\",\n\tproviders: [\n\t\t{\n\t\t\tprovide: NG_VALUE_ACCESSOR,\n\t\t\tuseExisting: forwardRef(() => KitToggle),\n\t\t\tmulti: true,\n\t\t},\n\t],\n})\nexport class KitToggle implements ControlValueAccessor {\n\tchecked = false;\n\tdisabled = false;\n\n\tprivate _uniqueId = `kit-toggle-input-${nextId++}`;\n\n\tonChange: OnChangeFn<boolean> = (_) => {};\n\tonTouch: OnTouchedFn = () => {};\n\n\t@Input()\n\tid: Nullable<string>;\n\n\tget inputId(): string {\n\t\treturn this.id ?? this._uniqueId;\n\t}\n\n\ttoggle(): void {\n\t\tthis.checked = !this.checked;\n\t\tthis.onChange(this.checked);\n\t}\n\n\tsetDisabledState(isDisabled: boolean): void {\n\t\tthis.disabled = isDisabled;\n\t}\n\n\twriteValue(value: unknown): void {\n\t\tthis.checked = !!value;\n\t}\n\n\tregisterOnChange(fn: OnChangeFn): void {\n\t\tthis.onChange = fn;\n\t}\n\n\tregisterOnTouched(fn: OnTouchedFn): void {\n\t\tthis.onTouch = fn;\n\t}\n}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"implements": ["ControlValueAccessor"],
+			"accessors": {
+				"inputId": {
+					"name": "inputId",
+					"getSignature": {
+						"name": "inputId",
+						"type": "string",
+						"returnType": "string",
+						"line": 31
+					}
+				}
+			},
+			"templateData": "<div class=\"kit-toggle\" [class.kit-toggle--disabled]=\"disabled\">\n    <button\n        class=\"kit-toggle-button\"\n        role=\"switch\"\n        type=\"button\"\n        [attr.aria-checked]=\"checked\"\n        [attr.aria-disabled]=\"disabled\"\n        [disabled]=\"disabled\"\n        [id]=\"inputId\"\n        (click)=\"toggle()\"\n    >\n        <span aria-hidden=\"true\"></span>\n    </button>\n    <label class=\"kit-toggle-label\" [for]=\"inputId\">\n        <ng-content />\n    </label>\n</div>\n"
+		}
+	],
+	"modules": [
+		{
+			"name": "KitFormFieldModule",
+			"id": "module-KitFormFieldModule-693e792fe3291c4a4f06403ed870ae041a4399d410b7653e3f421fc527212bb84485ace40ce151b55a1bfd6d485301a3ff0d76f6d37349e3f960a7938a167ea1",
+			"description": "",
+			"deprecationMessage": "",
+			"deprecated": false,
+			"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.module.ts",
+			"methods": [],
+			"sourceCode": "import {\n\tNgIf,\n\tNgSwitch,\n\tNgSwitchCase,\n\tNgTemplateOutlet,\n} from \"@angular/common\";\nimport { NgModule } from \"@angular/core\";\nimport { KitSpinner } from \"../../indicator\";\nimport { KitFormFieldErrorComponent } from \"./error/form-field-error.component\";\nimport { KitFormFieldAction } from \"./form-field-action.directive\";\nimport { KitFormFieldHint } from \"./form-field-hint.directive\";\nimport { KitFormFieldInput } from \"./form-field-input.directive\";\nimport { KitFormField } from \"./form-field.component\";\n\n@NgModule({\n\tdeclarations: [\n\t\tKitFormField,\n\t\tKitFormFieldErrorComponent,\n\t\tKitFormFieldInput,\n\t\tKitFormFieldHint,\n\t\tKitFormFieldAction,\n\t],\n\timports: [NgIf, NgTemplateOutlet, NgSwitch, NgSwitchCase, KitSpinner],\n\texports: [\n\t\tKitFormField,\n\t\tKitFormFieldErrorComponent,\n\t\tKitFormFieldInput,\n\t\tKitFormFieldHint,\n\t\tKitFormFieldAction,\n\t],\n})\nexport class KitFormFieldModule {}\n",
+			"children": [
+				{
+					"type": "providers",
+					"elements": []
+				},
+				{
+					"type": "declarations",
+					"elements": [
+						{
+							"name": "KitFormField"
+						},
+						{
+							"name": "KitFormFieldAction"
+						},
+						{
+							"name": "KitFormFieldErrorComponent"
+						},
+						{
+							"name": "KitFormFieldHint"
+						},
+						{
+							"name": "KitFormFieldInput"
+						}
+					]
+				},
+				{
+					"type": "imports",
+					"elements": [
+						{
+							"name": "KitSpinner"
+						},
+						{
+							"name": "NgIf"
+						},
+						{
+							"name": "NgSwitch"
+						},
+						{
+							"name": "NgSwitchCase"
+						},
+						{
+							"name": "NgTemplateOutlet"
+						}
+					]
+				},
+				{
+					"type": "exports",
+					"elements": [
+						{
+							"name": "KitFormField"
+						},
+						{
+							"name": "KitFormFieldAction"
+						},
+						{
+							"name": "KitFormFieldErrorComponent"
+						},
+						{
+							"name": "KitFormFieldHint"
+						},
+						{
+							"name": "KitFormFieldInput"
+						}
+					]
+				},
+				{
+					"type": "bootstrap",
+					"elements": []
+				},
+				{
+					"type": "classes",
+					"elements": []
+				}
+			]
+		},
+		{
+			"name": "KitRadioModule",
+			"id": "module-KitRadioModule-777e492d96b83e835596bd30bb0165f2ba5a0acce6f6932bef71e12577c5bc174201add4a9b57841c31a6b842df91ec5bb1c369ace72dd64dae7738a569c9dc2",
+			"description": "",
+			"deprecationMessage": "",
+			"deprecated": false,
+			"file": "projects/ngx-kit/src/lib/components/form/radio/radio.module.ts",
+			"methods": [],
+			"sourceCode": "import { NgClass } from \"@angular/common\";\nimport { NgModule } from \"@angular/core\";\nimport { KitRadio, KitRadioGroup } from \"./radio.component\";\n\n@NgModule({\n\tdeclarations: [KitRadioGroup, KitRadio],\n\texports: [KitRadioGroup, KitRadio],\n\timports: [NgClass],\n})\nexport class KitRadioModule {}\n",
+			"children": [
+				{
+					"type": "providers",
+					"elements": []
+				},
+				{
+					"type": "declarations",
+					"elements": [
+						{
+							"name": "KitRadio"
+						},
+						{
+							"name": "KitRadioGroup"
+						}
+					]
+				},
+				{
+					"type": "imports",
+					"elements": [
+						{
+							"name": "NgClass"
+						}
+					]
+				},
+				{
+					"type": "exports",
+					"elements": [
+						{
+							"name": "KitRadio"
+						},
+						{
+							"name": "KitRadioGroup"
+						}
+					]
+				},
+				{
+					"type": "bootstrap",
+					"elements": []
+				},
+				{
+					"type": "classes",
+					"elements": []
+				}
+			]
+		}
+	],
+	"miscellaneous": {
+		"variables": [
+			{
+				"name": "Action",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <input kitFormFieldInput [formControl]='control'>\n                    <button kit-icon-button kitFormFieldAction>\n                        <kit-icon name=\"eye-line\" />\n                    </button>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Action",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                <span kit-dialog-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-dialog-action variant='secondary'>Worem</button>\n                <button kit-button kit-dialog-action>Lorem</button>\n            </kit-dialog>`,\n\t}),\n}"
+			},
+			{
+				"name": "blurInputErrorStateMatcher",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.options.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "InputErrorStateMatcherFn",
+				"defaultValue": "(\n\tcontrol,\n) => {\n\treturn !!(control?.invalid && control.touched);\n}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/icon/icon.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(false);\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-checkbox [formControl]='control' [id]='id'>Label</kit-checkbox>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\targs: {},\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <input kitFormFieldInput [formControl]='control'>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(\"1\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-radio-group [formControl]='control'>\n                    <kit-radio value='1' [reversed]='reversed'>Option 1</kit-radio>\n                    <kit-radio value='2' [reversed]='reversed'>Option 2</kit-radio>\n                </kit-radio-group>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(false);\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-toggle [formControl]='control'>Label</kit-toggle>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n            </kit-dialog>`,\n\t}),\n}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{}"
+			},
+			{
+				"name": "defaultInputErrorStateMatcher",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.options.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "InputErrorStateMatcherFn",
+				"defaultValue": "(\n\tcontrol,\n) => {\n\treturn !!(control?.invalid && (control.touched || control.dirty));\n}"
+			},
+			{
+				"name": "Disabled",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-button disabled>Click me</button>`,\n\t}),\n}"
+			},
+			{
+				"name": "Disabled",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-icon-button disabled><kit-icon name=\"add-line\" /></button>`,\n\t}),\n}"
+			},
+			{
+				"name": "Disabled",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(true);\n\t\tcontrol.disable();\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-checkbox [formControl]='control' [id]='id'>Label</kit-checkbox>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Disabled",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"value\");\n\t\tcontrol.disable();\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <input kitFormFieldInput [formControl]='control'>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Disabled",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(true);\n\t\tcontrol.disable();\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-toggle [formControl]='control'>Label</kit-toggle>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "ErrorStateMatcher",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\", [\n\t\t\tValidators.required,\n\t\t\tValidators.email,\n\t\t]);\n\t\tconst stateMatcher = blurInputErrorStateMatcher;\n\n\t\treturn {\n\t\t\tprops: { ...args, control, stateMatcher },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Email\n                    <input kitFormFieldInput type='email' [formControl]='control' [stateMatcher]='stateMatcher'>\n                    <kit-form-field-hint>Error will be displayed after blur event</kit-form-field-hint>\n                    <kit-form-field-error type='required'>This field is required</kit-form-field-error>\n                    <kit-form-field-error type='email'>This field should be an email</kit-form-field-error>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Hint",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <input kitFormFieldInput [formControl]='control'>\n                    <kit-form-field-hint>This is a hint</kit-form-field-hint>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Icon",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-button><kit-icon name=\"brush-line\" />Click me</button>`,\n\t}),\n}"
+			},
+			{
+				"name": "Icon",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-toast icon='error-warning-line'>\n                Lorem ipsum dolor sit amet consectetur adipisicing elit\n            </kit-toast>`,\n\t}),\n}"
+			},
+			{
+				"name": "Invalid",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\", [\n\t\t\tValidators.required,\n\t\t\tValidators.email,\n\t\t]);\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Email\n                    <input kitFormFieldInput type='email' [formControl]='control'>\n                    <kit-form-field-error type='required'>This field is required</kit-form-field-error>\n                    <kit-form-field-error type='email'>This field should be an email</kit-form-field-error>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "KIT_RADIO_GROUP",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "",
+				"defaultValue": "new InjectionToken<KitRadioGroup>(\n\t\"KitRadioGroup\",\n)"
+			},
+			{
+				"name": "KIT_TOAST_DATA",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-data.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "",
+				"defaultValue": "new InjectionToken<KitToastData>(\n\t\"kit-toast-data\",\n)"
+			},
+			{
+				"name": "KIT_TOAST_DEFAULT_CONFIG",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "",
+				"defaultValue": "new InjectionToken<KitToastConfig>(\n\t\"kit-toast-default-config\",\n\t{\n\t\tprovidedIn: \"root\",\n\t\tfactory: () => new KitToastConfig(),\n\t},\n)"
+			},
+			{
+				"name": "Loading",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-button loading>Click me</button>`,\n\t}),\n}"
+			},
+			{
+				"name": "MAX_TIMEOUT",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-ref.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "",
+				"defaultValue": "2 ** 31 - 1"
+			},
+			{
+				"name": "meta",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/icon/icon.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Meta<KitIcon>",
+				"defaultValue": "{\n\ttitle: \"Component / Icon\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitIcon,\n\targTypes: {\n\t\tname: {\n\t\t\tdescription: \"The name of the icon to display.\",\n\t\t},\n\t},\n\targs: {\n\t\tname: \"brush-line\",\n\t},\n\trender: (args) => ({\n\t\tprops: args,\n\t\ttemplate: `<kit-icon ${argsToTemplate(args)} />`,\n\t}),\n}"
+			},
+			{
+				"name": "meta",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Meta<KitButton>",
+				"defaultValue": "{\n\ttitle: \"Component / Action / Button\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitButton,\n\tdecorators: [\n\t\tmoduleMetadata({\n\t\t\timports: [KitIcon],\n\t\t}),\n\t],\n\targTypes: {\n\t\tvariant: {\n\t\t\tcontrol: \"select\",\n\t\t\tdescription: \"The variant of the button.\",\n\t\t},\n\t\tdisabled: {\n\t\t\tcontrol: \"boolean\",\n\t\t\tdescription: \"Whether the button is disabled or not.\",\n\t\t},\n\t\tloading: {\n\t\t\tcontrol: \"boolean\",\n\t\t\tdescription: \"Whether the button has triggered an action.\",\n\t\t},\n\t},\n\targs: {\n\t\tvariant: \"primary\",\n\t\tdisabled: false,\n\t\tloading: false,\n\t},\n\trender: (args) => ({\n\t\tprops: args,\n\t\ttemplate: `<button kit-button ${argsToTemplate(args)}>Click me</button>`,\n\t}),\n}"
+			},
+			{
+				"name": "meta",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Meta<KitIconButton>",
+				"defaultValue": "{\n\ttitle: \"Component / Action / Icon Button\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitIconButton,\n\tdecorators: [\n\t\tmoduleMetadata({\n\t\t\timports: [KitIcon],\n\t\t}),\n\t],\n\targTypes: {\n\t\tdisabled: {\n\t\t\tcontrol: \"boolean\",\n\t\t\tdescription: \"Whether the button is disabled or not.\",\n\t\t},\n\t\tvariant: {\n\t\t\tcontrol: \"select\",\n\t\t\tdescription: \"The variant of the button.\",\n\t\t},\n\t},\n\targs: {\n\t\tvariant: \"default\",\n\t\tdisabled: false,\n\t},\n\trender: (args) => ({\n\t\tprops: args,\n\t\ttemplate: `<button kit-icon-button ${argsToTemplate(\n\t\t\targs,\n\t\t)}><kit-icon name=\"add-line\" /></button>`,\n\t}),\n}"
+			},
+			{
+				"name": "meta",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Meta<KitFormField>",
+				"defaultValue": "{\n\ttitle: \"Component / Form / Field\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitFormField,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div style='width: 390px'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [\n\t\t\t\tJsonPipe,\n\t\t\t\tReactiveFormsModule,\n\t\t\t\tKitFormFieldModule,\n\t\t\t\tKitIconButton,\n\t\t\t\tKitIcon,\n\t\t\t],\n\t\t}),\n\t],\n}"
+			},
+			{
+				"name": "meta",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Meta<KitToggle>",
+				"defaultValue": "{\n\ttitle: \"Component / Form / Toggle\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitToggle,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div style='width: 390px'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [JsonPipe, ReactiveFormsModule],\n\t\t}),\n\t],\n\targTypes: {},\n}"
+			},
+			{
+				"name": "meta",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Meta<KitSpinner>",
+				"defaultValue": "{\n\ttitle: \"Component / Indicator / Spinner\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitSpinner,\n\targTypes: {\n\t\tsize: {\n\t\t\tcontrol: \"select\",\n\t\t\tdescription: \"The size of the spinner.\",\n\t\t},\n\t},\n\targs: {\n\t\tsize: \"medium\",\n\t},\n\trender: (args) => ({\n\t\tprops: args,\n\t\ttemplate: `<kit-spinner ${argsToTemplate(args)} />`,\n\t}),\n}"
+			},
+			{
+				"name": "meta",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Meta<KitDialog>",
+				"defaultValue": "{\n\ttitle: \"Component / Overlay / Dialog\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitDialog,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div class='storybook-container'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [KitButton],\n\t\t}),\n\t],\n}"
+			},
+			{
+				"name": "meta",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Meta<KitToast>",
+				"defaultValue": "{\n\ttitle: \"Component / Overlay / Toast\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitToast,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div class='storybook-container'>${story}</div>`,\n\t\t),\n\t],\n\targTypes: {\n\t\ticon: {\n\t\t\tdescription: \"The icon to render on the left side of the toast.\",\n\t\t},\n\t},\n\targs: {\n\t\ttype: \"primary\",\n\t},\n\trender: (args) => ({\n\t\tprops: args,\n\t\ttemplate: `\n            <kit-toast ${argsToTemplate(args)}>\n                Lorem ipsum dolor sit amet consectetur adipisicing elit\n            </kit-toast>`,\n\t}),\n}"
+			},
+			{
+				"name": "MultiLine",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-toast icon='error-warning-line'>\n                Lorem ipsum dolor sit amet consectetur adipisicing elit. Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n            </kit-toast>`,\n\t}),\n}"
+			},
+			{
+				"name": "nextId",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "number",
+				"defaultValue": "0"
+			},
+			{
+				"name": "nextId",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.directive.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "number",
+				"defaultValue": "0"
+			},
+			{
+				"name": "nextId",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "number",
+				"defaultValue": "0"
+			},
+			{
+				"name": "nextId",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "number",
+				"defaultValue": "0"
+			},
+			{
+				"name": "Pending",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst fakeAsyncValidator: AsyncValidatorFn = (_) => {\n\t\t\treturn of({ async: true }).pipe(delay(3000));\n\t\t};\n\t\tconst control = new FormControl(\"\", {\n\t\t\tvalidators: [Validators.required],\n\t\t\tasyncValidators: [fakeAsyncValidator],\n\t\t\tupdateOn: \"blur\",\n\t\t});\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <input kitFormFieldInput [formControl]='control'>\n                    <kit-form-field-hint>Async error will be displayed after 3 seconds</kit-form-field-hint>\n                    <kit-form-field-error type='required'>This field is required</kit-form-field-error>\n                    <kit-form-field-error type='async'>This field is incorrect</kit-form-field-error>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "preview",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/.storybook/preview.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Preview",
+				"defaultValue": "{\n\tparameters: {\n\t\tactions: { argTypesRegex: \"^on[A-Z].*\" },\n\t\tcontrols: {\n\t\t\texpanded: true,\n\t\t},\n\t\tlayout: \"centered\",\n\t},\n}"
+			},
+			{
+				"name": "Required",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(false, [Validators.required]);\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-checkbox required [formControl]='control' [id]='id'>Label</kit-checkbox>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Reversed",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\targs: { reversed: true },\n\trender: (args) => {\n\t\tconst control = new FormControl(\"1\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-radio-group [formControl]='control'>\n                    <kit-radio value='1' [reversed]='reversed'>Option 1</kit-radio>\n                    <kit-radio value='2' [reversed]='reversed'>Option 2</kit-radio>\n                </kit-radio-group>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Select",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"1\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <select kitFormFieldInput [formControl]='control'>\n                        <option value='1'>Option 1</option>\n                        <option value='2'>Option 2</option>\n                    </select>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Size",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<kit-spinner size='small' />`,\n\t}),\n}"
+			},
+			{
+				"name": "Textarea",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <textarea kitFormFieldInput [formControl]='control'></textarea>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Title",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                <span kit-dialog-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n            </kit-dialog>`,\n\t}),\n}"
+			},
+			{
+				"name": "Title",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-toast icon='error-warning-line'>\n                <span kit-toast-title>Worem ipsum</span>\n                Lorem ipsum dolor sit amet consectetur adipisicing elit\n            </kit-toast>`,\n\t}),\n}"
+			},
+			{
+				"name": "Type",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-toast type='error'>\n                Lorem ipsum dolor sit amet consectetur adipisicing elit\n            </kit-toast>`,\n\t}),\n}"
+			},
+			{
+				"name": "Variant",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-button variant='secondary'>Click me</button>`,\n\t}),\n}"
+			},
+			{
+				"name": "Variant",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-icon-button variant=\"primary\"><kit-icon name=\"add-line\" /></button>`,\n\t}),\n}"
+			}
+		],
+		"functions": [],
+		"typealiases": [
+			{
+				"name": "InputErrorStateMatcherFn",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "function",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.options.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 184
+			},
+			{
+				"name": "KitToastHorizontalPosition",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "\"center\" | \"left\" | \"right\"",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 192
+			},
+			{
+				"name": "KitToastType",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "\"primary\" | \"validation\" | \"warning\" | \"error\"",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 192
+			},
+			{
+				"name": "KitToastVerticalPosition",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "\"top\" | \"bottom\"",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 192
+			},
+			{
+				"name": "Nullable",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "T | null | undefined",
+				"file": "projects/ngx-kit/src/lib/core/index.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 192
+			},
+			{
+				"name": "OnChangeFn",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "function",
+				"file": "projects/ngx-kit/src/lib/core/index.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 184
+			},
+			{
+				"name": "OnTouchedFn",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "function",
+				"file": "projects/ngx-kit/src/lib/core/index.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 184
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "StoryObj<KitIcon>",
+				"file": "projects/ngx-kit/src/lib/components/icon/icon.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "StoryObj<KitButton>",
+				"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "StoryObj<KitIconButton>",
+				"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "StoryObj<KitCheckbox>",
+				"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "StoryObj<KitFormField>",
+				"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "StoryObj<KitRadio>",
+				"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "StoryObj<KitToggle>",
+				"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "StoryObj<KitSpinner>",
+				"file": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "StoryObj<KitDialog>",
+				"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
+				"rawtype": "StoryObj<KitToast>",
+				"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			}
+		],
+		"enumerations": [],
+		"groupedVariables": {
+			"projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts": [
+				{
+					"name": "Action",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <input kitFormFieldInput [formControl]='control'>\n                    <button kit-icon-button kitFormFieldAction>\n                        <kit-icon name=\"eye-line\" />\n                    </button>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\targs: {},\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <input kitFormFieldInput [formControl]='control'>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "Disabled",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"value\");\n\t\tcontrol.disable();\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <input kitFormFieldInput [formControl]='control'>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "ErrorStateMatcher",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\", [\n\t\t\tValidators.required,\n\t\t\tValidators.email,\n\t\t]);\n\t\tconst stateMatcher = blurInputErrorStateMatcher;\n\n\t\treturn {\n\t\t\tprops: { ...args, control, stateMatcher },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Email\n                    <input kitFormFieldInput type='email' [formControl]='control' [stateMatcher]='stateMatcher'>\n                    <kit-form-field-hint>Error will be displayed after blur event</kit-form-field-hint>\n                    <kit-form-field-error type='required'>This field is required</kit-form-field-error>\n                    <kit-form-field-error type='email'>This field should be an email</kit-form-field-error>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "Hint",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <input kitFormFieldInput [formControl]='control'>\n                    <kit-form-field-hint>This is a hint</kit-form-field-hint>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "Invalid",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\", [\n\t\t\tValidators.required,\n\t\t\tValidators.email,\n\t\t]);\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Email\n                    <input kitFormFieldInput type='email' [formControl]='control'>\n                    <kit-form-field-error type='required'>This field is required</kit-form-field-error>\n                    <kit-form-field-error type='email'>This field should be an email</kit-form-field-error>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "meta",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Meta<KitFormField>",
+					"defaultValue": "{\n\ttitle: \"Component / Form / Field\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitFormField,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div style='width: 390px'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [\n\t\t\t\tJsonPipe,\n\t\t\t\tReactiveFormsModule,\n\t\t\t\tKitFormFieldModule,\n\t\t\t\tKitIconButton,\n\t\t\t\tKitIcon,\n\t\t\t],\n\t\t}),\n\t],\n}"
+				},
+				{
+					"name": "Pending",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst fakeAsyncValidator: AsyncValidatorFn = (_) => {\n\t\t\treturn of({ async: true }).pipe(delay(3000));\n\t\t};\n\t\tconst control = new FormControl(\"\", {\n\t\t\tvalidators: [Validators.required],\n\t\t\tasyncValidators: [fakeAsyncValidator],\n\t\t\tupdateOn: \"blur\",\n\t\t});\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <input kitFormFieldInput [formControl]='control'>\n                    <kit-form-field-hint>Async error will be displayed after 3 seconds</kit-form-field-hint>\n                    <kit-form-field-error type='required'>This field is required</kit-form-field-error>\n                    <kit-form-field-error type='async'>This field is incorrect</kit-form-field-error>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "Select",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"1\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <select kitFormFieldInput [formControl]='control'>\n                        <option value='1'>Option 1</option>\n                        <option value='2'>Option 2</option>\n                    </select>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "Textarea",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <textarea kitFormFieldInput [formControl]='control'></textarea>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts": [
+				{
+					"name": "Action",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                <span kit-dialog-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-dialog-action variant='secondary'>Worem</button>\n                <button kit-button kit-dialog-action>Lorem</button>\n            </kit-dialog>`,\n\t}),\n}"
+				},
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n            </kit-dialog>`,\n\t}),\n}"
+				},
+				{
+					"name": "meta",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Meta<KitDialog>",
+					"defaultValue": "{\n\ttitle: \"Component / Overlay / Dialog\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitDialog,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div class='storybook-container'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [KitButton],\n\t\t}),\n\t],\n}"
+				},
+				{
+					"name": "Title",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                <span kit-dialog-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n            </kit-dialog>`,\n\t}),\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/form-field/form-field-input.options.ts": [
+				{
+					"name": "blurInputErrorStateMatcher",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.options.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "InputErrorStateMatcherFn",
+					"defaultValue": "(\n\tcontrol,\n) => {\n\treturn !!(control?.invalid && control.touched);\n}"
+				},
+				{
+					"name": "defaultInputErrorStateMatcher",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.options.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "InputErrorStateMatcherFn",
+					"defaultValue": "(\n\tcontrol,\n) => {\n\treturn !!(control?.invalid && (control.touched || control.dirty));\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/icon/icon.component.stories.ts": [
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/icon/icon.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{}"
+				},
+				{
+					"name": "meta",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/icon/icon.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Meta<KitIcon>",
+					"defaultValue": "{\n\ttitle: \"Component / Icon\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitIcon,\n\targTypes: {\n\t\tname: {\n\t\t\tdescription: \"The name of the icon to display.\",\n\t\t},\n\t},\n\targs: {\n\t\tname: \"brush-line\",\n\t},\n\trender: (args) => ({\n\t\tprops: args,\n\t\ttemplate: `<kit-icon ${argsToTemplate(args)} />`,\n\t}),\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts": [
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{}"
+				},
+				{
+					"name": "Disabled",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-button disabled>Click me</button>`,\n\t}),\n}"
+				},
+				{
+					"name": "Icon",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-button><kit-icon name=\"brush-line\" />Click me</button>`,\n\t}),\n}"
+				},
+				{
+					"name": "Loading",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-button loading>Click me</button>`,\n\t}),\n}"
+				},
+				{
+					"name": "meta",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Meta<KitButton>",
+					"defaultValue": "{\n\ttitle: \"Component / Action / Button\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitButton,\n\tdecorators: [\n\t\tmoduleMetadata({\n\t\t\timports: [KitIcon],\n\t\t}),\n\t],\n\targTypes: {\n\t\tvariant: {\n\t\t\tcontrol: \"select\",\n\t\t\tdescription: \"The variant of the button.\",\n\t\t},\n\t\tdisabled: {\n\t\t\tcontrol: \"boolean\",\n\t\t\tdescription: \"Whether the button is disabled or not.\",\n\t\t},\n\t\tloading: {\n\t\t\tcontrol: \"boolean\",\n\t\t\tdescription: \"Whether the button has triggered an action.\",\n\t\t},\n\t},\n\targs: {\n\t\tvariant: \"primary\",\n\t\tdisabled: false,\n\t\tloading: false,\n\t},\n\trender: (args) => ({\n\t\tprops: args,\n\t\ttemplate: `<button kit-button ${argsToTemplate(args)}>Click me</button>`,\n\t}),\n}"
+				},
+				{
+					"name": "Variant",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-button variant='secondary'>Click me</button>`,\n\t}),\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts": [
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{}"
+				},
+				{
+					"name": "Disabled",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-icon-button disabled><kit-icon name=\"add-line\" /></button>`,\n\t}),\n}"
+				},
+				{
+					"name": "meta",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Meta<KitIconButton>",
+					"defaultValue": "{\n\ttitle: \"Component / Action / Icon Button\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitIconButton,\n\tdecorators: [\n\t\tmoduleMetadata({\n\t\t\timports: [KitIcon],\n\t\t}),\n\t],\n\targTypes: {\n\t\tdisabled: {\n\t\t\tcontrol: \"boolean\",\n\t\t\tdescription: \"Whether the button is disabled or not.\",\n\t\t},\n\t\tvariant: {\n\t\t\tcontrol: \"select\",\n\t\t\tdescription: \"The variant of the button.\",\n\t\t},\n\t},\n\targs: {\n\t\tvariant: \"default\",\n\t\tdisabled: false,\n\t},\n\trender: (args) => ({\n\t\tprops: args,\n\t\ttemplate: `<button kit-icon-button ${argsToTemplate(\n\t\t\targs,\n\t\t)}><kit-icon name=\"add-line\" /></button>`,\n\t}),\n}"
+				},
+				{
+					"name": "Variant",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-icon-button variant=\"primary\"><kit-icon name=\"add-line\" /></button>`,\n\t}),\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts": [
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(false);\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-checkbox [formControl]='control' [id]='id'>Label</kit-checkbox>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "Disabled",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(true);\n\t\tcontrol.disable();\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-checkbox [formControl]='control' [id]='id'>Label</kit-checkbox>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "Required",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(false, [Validators.required]);\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-checkbox required [formControl]='control' [id]='id'>Label</kit-checkbox>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/radio/radio.component.stories.ts": [
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(\"1\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-radio-group [formControl]='control'>\n                    <kit-radio value='1' [reversed]='reversed'>Option 1</kit-radio>\n                    <kit-radio value='2' [reversed]='reversed'>Option 2</kit-radio>\n                </kit-radio-group>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "Reversed",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\targs: { reversed: true },\n\trender: (args) => {\n\t\tconst control = new FormControl(\"1\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-radio-group [formControl]='control'>\n                    <kit-radio value='1' [reversed]='reversed'>Option 1</kit-radio>\n                    <kit-radio value='2' [reversed]='reversed'>Option 2</kit-radio>\n                </kit-radio-group>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts": [
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(false);\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-toggle [formControl]='control'>Label</kit-toggle>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "Disabled",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: (args) => {\n\t\tconst control = new FormControl(true);\n\t\tcontrol.disable();\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-toggle [formControl]='control'>Label</kit-toggle>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+				},
+				{
+					"name": "meta",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Meta<KitToggle>",
+					"defaultValue": "{\n\ttitle: \"Component / Form / Toggle\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitToggle,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div style='width: 390px'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [JsonPipe, ReactiveFormsModule],\n\t\t}),\n\t],\n\targTypes: {},\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts": [
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{}"
+				},
+				{
+					"name": "meta",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Meta<KitSpinner>",
+					"defaultValue": "{\n\ttitle: \"Component / Indicator / Spinner\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitSpinner,\n\targTypes: {\n\t\tsize: {\n\t\t\tcontrol: \"select\",\n\t\t\tdescription: \"The size of the spinner.\",\n\t\t},\n\t},\n\targs: {\n\t\tsize: \"medium\",\n\t},\n\trender: (args) => ({\n\t\tprops: args,\n\t\ttemplate: `<kit-spinner ${argsToTemplate(args)} />`,\n\t}),\n}"
+				},
+				{
+					"name": "Size",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<kit-spinner size='small' />`,\n\t}),\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts": [
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{}"
+				},
+				{
+					"name": "Icon",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-toast icon='error-warning-line'>\n                Lorem ipsum dolor sit amet consectetur adipisicing elit\n            </kit-toast>`,\n\t}),\n}"
+				},
+				{
+					"name": "meta",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Meta<KitToast>",
+					"defaultValue": "{\n\ttitle: \"Component / Overlay / Toast\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitToast,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div class='storybook-container'>${story}</div>`,\n\t\t),\n\t],\n\targTypes: {\n\t\ticon: {\n\t\t\tdescription: \"The icon to render on the left side of the toast.\",\n\t\t},\n\t},\n\targs: {\n\t\ttype: \"primary\",\n\t},\n\trender: (args) => ({\n\t\tprops: args,\n\t\ttemplate: `\n            <kit-toast ${argsToTemplate(args)}>\n                Lorem ipsum dolor sit amet consectetur adipisicing elit\n            </kit-toast>`,\n\t}),\n}"
+				},
+				{
+					"name": "MultiLine",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-toast icon='error-warning-line'>\n                Lorem ipsum dolor sit amet consectetur adipisicing elit. Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n            </kit-toast>`,\n\t}),\n}"
+				},
+				{
+					"name": "Title",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-toast icon='error-warning-line'>\n                <span kit-toast-title>Worem ipsum</span>\n                Lorem ipsum dolor sit amet consectetur adipisicing elit\n            </kit-toast>`,\n\t}),\n}"
+				},
+				{
+					"name": "Type",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-toast type='error'>\n                Lorem ipsum dolor sit amet consectetur adipisicing elit\n            </kit-toast>`,\n\t}),\n}"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/radio/radio.component.ts": [
+				{
+					"name": "KIT_RADIO_GROUP",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"defaultValue": "new InjectionToken<KitRadioGroup>(\n\t\"KitRadioGroup\",\n)"
+				},
+				{
+					"name": "nextId",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "number",
+					"defaultValue": "0"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/overlay/toast/toast-data.ts": [
+				{
+					"name": "KIT_TOAST_DATA",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-data.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"defaultValue": "new InjectionToken<KitToastData>(\n\t\"kit-toast-data\",\n)"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts": [
+				{
+					"name": "KIT_TOAST_DEFAULT_CONFIG",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"defaultValue": "new InjectionToken<KitToastConfig>(\n\t\"kit-toast-default-config\",\n\t{\n\t\tprovidedIn: \"root\",\n\t\tfactory: () => new KitToastConfig(),\n\t},\n)"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/overlay/toast/toast-ref.ts": [
+				{
+					"name": "MAX_TIMEOUT",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-ref.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "",
+					"defaultValue": "2 ** 31 - 1"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.ts": [
+				{
+					"name": "nextId",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "number",
+					"defaultValue": "0"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/form-field/form-field-input.directive.ts": [
+				{
+					"name": "nextId",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.directive.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "number",
+					"defaultValue": "0"
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/toggle/toggle.component.ts": [
+				{
+					"name": "nextId",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "number",
+					"defaultValue": "0"
+				}
+			],
+			"projects/ngx-kit/.storybook/preview.ts": [
+				{
+					"name": "preview",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/.storybook/preview.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Preview",
+					"defaultValue": "{\n\tparameters: {\n\t\tactions: { argTypesRegex: \"^on[A-Z].*\" },\n\t\tcontrols: {\n\t\t\texpanded: true,\n\t\t},\n\t\tlayout: \"centered\",\n\t},\n}"
+				}
+			]
+		},
+		"groupedFunctions": {},
+		"groupedEnumerations": {},
+		"groupedTypeAliases": {
+			"projects/ngx-kit/src/lib/components/form/form-field/form-field-input.options.ts": [
+				{
+					"name": "InputErrorStateMatcherFn",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "function",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.options.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 184
+				}
+			],
+			"projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts": [
+				{
+					"name": "KitToastHorizontalPosition",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "\"center\" | \"left\" | \"right\"",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 192
+				},
+				{
+					"name": "KitToastVerticalPosition",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "\"top\" | \"bottom\"",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 192
+				}
+			],
+			"projects/ngx-kit/src/lib/components/overlay/toast/toast.component.ts": [
+				{
+					"name": "KitToastType",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "\"primary\" | \"validation\" | \"warning\" | \"error\"",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 192
+				}
+			],
+			"projects/ngx-kit/src/lib/core/index.ts": [
+				{
+					"name": "Nullable",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "T | null | undefined",
+					"file": "projects/ngx-kit/src/lib/core/index.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 192
+				},
+				{
+					"name": "OnChangeFn",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "function",
+					"file": "projects/ngx-kit/src/lib/core/index.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 184
+				},
+				{
+					"name": "OnTouchedFn",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "function",
+					"file": "projects/ngx-kit/src/lib/core/index.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 184
+				}
+			],
+			"projects/ngx-kit/src/lib/components/icon/icon.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitIcon>",
+					"file": "projects/ngx-kit/src/lib/components/icon/icon.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			],
+			"projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitButton>",
+					"file": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			],
+			"projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitIconButton>",
+					"file": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitCheckbox>",
+					"file": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitFormField>",
+					"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/radio/radio.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitRadio>",
+					"file": "projects/ngx-kit/src/lib/components/form/radio/radio.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			],
+			"projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitToggle>",
+					"file": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			],
+			"projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitSpinner>",
+					"file": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			],
+			"projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitDialog>",
+					"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			],
+			"projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitToast>",
+					"file": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			]
+		}
+	},
+	"routes": [],
+	"coverage": {
+		"count": 0,
+		"status": "low",
+		"files": [
+			{
+				"filePath": "projects/ngx-kit/.storybook/preview.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "preview",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Disabled",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Icon",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Loading",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "meta",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/button/button.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Variant",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/button/button.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitButton",
+				"coveragePercent": 0,
+				"coverageCount": "0/4",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Disabled",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "meta",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Variant",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/action/icon-button/icon-button.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitIconButton",
+				"coveragePercent": 0,
+				"coverageCount": "0/3",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Disabled",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Required",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitCheckbox",
+				"coveragePercent": 0,
+				"coverageCount": "0/13",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/checkbox/checkbox.component.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "nextId",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/error/form-field-error.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitFormFieldErrorComponent",
+				"coveragePercent": 0,
+				"coverageCount": "0/3",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field-action.directive.ts",
+				"type": "directive",
+				"linktype": "directive",
+				"name": "KitFormFieldAction",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field-hint.directive.ts",
+				"type": "directive",
+				"linktype": "directive",
+				"name": "KitFormFieldHint",
+				"coveragePercent": 0,
+				"coverageCount": "0/2",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.directive.ts",
+				"type": "directive",
+				"linktype": "directive",
+				"name": "KitFormFieldInput",
+				"coveragePercent": 0,
+				"coverageCount": "0/16",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.directive.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "nextId",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.options.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "blurInputErrorStateMatcher",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.options.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "defaultInputErrorStateMatcher",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Action",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Disabled",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "ErrorStateMatcher",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Hint",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Invalid",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "meta",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Pending",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Select",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Textarea",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/form-field/form-field.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitFormField",
+				"coveragePercent": 0,
+				"coverageCount": "0/8",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/radio/radio.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/radio/radio.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Reversed",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/radio/radio.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitRadio",
+				"coveragePercent": 0,
+				"coverageCount": "0/10",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/radio/radio.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitRadioGroup",
+				"coveragePercent": 0,
+				"coverageCount": "0/12",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/radio/radio.component.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "KIT_RADIO_GROUP",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/radio/radio.component.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "nextId",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Disabled",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "meta",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitToggle",
+				"coveragePercent": 0,
+				"coverageCount": "0/12",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/form/toggle/toggle.component.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "nextId",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/icon/icon.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/icon/icon.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "meta",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/icon/icon.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitIcon",
+				"coveragePercent": 0,
+				"coverageCount": "0/2",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "meta",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Size",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/indicator/spinner/spinner.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitSpinner",
+				"coveragePercent": 0,
+				"coverageCount": "0/2",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog-close.directive.ts",
+				"type": "directive",
+				"linktype": "directive",
+				"name": "KitDialogClose",
+				"coveragePercent": 0,
+				"coverageCount": "0/8",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog-ref.ts",
+				"type": "class",
+				"linktype": "classe",
+				"name": "KitDialogRef",
+				"coveragePercent": 0,
+				"coverageCount": "0/3",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Action",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "meta",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Title",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitDialog",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.service.ts",
+				"type": "injectable",
+				"linktype": "injectable",
+				"name": "KitDialogService",
+				"coveragePercent": 0,
+				"coverageCount": "0/9",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/simple-toast/simple-toast.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitSimpleToast",
+				"coveragePercent": 0,
+				"coverageCount": "0/2",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts",
+				"type": "class",
+				"linktype": "classe",
+				"name": "KitToastConfig",
+				"coveragePercent": 0,
+				"coverageCount": "0/4",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast-config.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "KIT_TOAST_DEFAULT_CONFIG",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast-data.ts",
+				"type": "interface",
+				"linktype": "interface",
+				"name": "KitToastData",
+				"coveragePercent": 0,
+				"coverageCount": "0/4",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast-data.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "KIT_TOAST_DATA",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast-ref.ts",
+				"type": "class",
+				"linktype": "classe",
+				"name": "KitToastRef",
+				"coveragePercent": 0,
+				"coverageCount": "0/5",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast-ref.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "MAX_TIMEOUT",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Icon",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "meta",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "MultiLine",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Title",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Type",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitToast",
+				"coveragePercent": 0,
+				"coverageCount": "0/3",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/toast/toast.service.ts",
+				"type": "injectable",
+				"linktype": "injectable",
+				"name": "KitToastService",
+				"coveragePercent": 0,
+				"coverageCount": "0/8",
+				"status": "low"
+			}
+		]
+	}
+}

@@ -1,0 +1,12 @@
+<div class="kit-dialog">
+    <div class="kit-dialog-title">
+        <ng-content select="span[kit-dialog-title]" />
+        <ng-content select="button[kit-dialog-close-button]" />
+    </div>
+    <div class="kit-dialog-content">
+        <ng-content />
+        <div class="kit-dialog-content-actions">
+            <ng-content select="[kit-dialog-action]" />
+        </div>
+    </div>
+</div>

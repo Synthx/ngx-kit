@@ -1,0 +1,9 @@
+<div class="kit-toast kit-toast_type--{{ type }}" role="alert">
+    @if (icon) {
+        <kit-icon class="kit-toast-icon" [name]="icon" />
+    }
+    <div class="kit-toast-content">
+        <ng-content select="span[kit-toast-title]" />
+        <ng-content />
+    </div>
+</div>

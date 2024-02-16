@@ -1,0 +1,16 @@
+<div class="kit-radio" [ngClass]="{ reversed: reversed }">
+    <input
+        class="kit-radio-input"
+        role="radio"
+        type="radio"
+        [attr.aria-checked]="checked"
+        [checked]="checked"
+        [id]="inputId"
+        [name]="name"
+        [value]="value"
+        (change)="_onValueChanged($event)"
+    />
+    <label class="kit-radio-label" [for]="inputId">
+        <ng-content />
+    </label>
+</div>

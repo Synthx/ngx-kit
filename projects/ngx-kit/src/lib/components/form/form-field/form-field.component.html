@@ -1,0 +1,34 @@
+<label
+  class="kit-form-field-label"
+  [for]="input.inputId"
+>
+  <ng-content/>
+  @if (input.required) {
+    <span aria-hidden="true" class="kit-form-field-label-required"> * </span>
+  }
+</label>
+<div class="kit-form-field" [class.kit-form-field--select]="input._isSelect">
+  <ng-content select="[kitFormFieldInput]"/>
+  @if (action || input.pending) {
+    <div class="kit-form-field-action">
+      @if (input.pending) {
+        <kit-spinner size="small"/>
+      } @else {
+        <ng-content select="[kitFormFieldAction]"/>
+      }
+    </div>
+  }
+</div>
+@if (shouldDisplayMessage()) {
+  <div class="kit-form-field-message">
+    @switch (getDisplayedMessage()) {
+      @case ('hint') {
+        <ng-content select="kit-form-field-hint"/>
+      }
+      @case ('error') {
+        <ng-container [ngTemplateOutlet]="getErrorMessage()"/>
+      }
+    }
+  </div>
+}
+<ng-content select="kit-form-field-error"/>

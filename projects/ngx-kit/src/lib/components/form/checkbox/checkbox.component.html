@@ -1,0 +1,19 @@
+<div class="kit-checkbox" [class.kit-checkbox--disabled]="disabled">
+    <input
+        class="kit-checkbox-input"
+        role="checkbox"
+        type="checkbox"
+        [attr.aria-checked]="checked"
+        [attr.aria-disabled]="disabled"
+        [checked]="checked"
+        [disabled]="disabled"
+        [id]="inputId"
+        (change)="toggle()"
+    />
+    <label class="kit-checkbox-label" [for]="inputId">
+        <ng-content />
+        @if (required) {
+            <span aria-hidden="true" class="kit-checkbox-label-required"> * </span>
+        }
+    </label>
+</div>

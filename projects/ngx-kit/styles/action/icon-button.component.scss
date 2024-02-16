@@ -1,0 +1,40 @@
+.kit-icon-button {
+  appearance: none;
+  background: var(--kit-color--primary);
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+  padding: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:disabled {
+    opacity: var(--kit-opacity--disabled);
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: .20rem solid #3b99fc;
+    outline-offset: -.20rem;
+  }
+
+  &_variant {
+    &--secondary {
+      background: var(--kit-color--background-content);
+      color: var(--kit-color--primary);
+    }
+
+    &--default {
+      background: transparent;
+      color: var(--kit-color--primary);
+    }
+  }
+}
