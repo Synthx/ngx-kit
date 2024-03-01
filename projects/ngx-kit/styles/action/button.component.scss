@@ -1,5 +1,6 @@
 .kit-button {
   position: relative;
+  height: 54px;
   background: var(--kit-color--primary);
   border: 1px solid var(--kit-color--primary);
   border-radius: var(--kit-radius--base);
@@ -14,8 +15,9 @@
   overflow: hidden;
   font-size: .875rem;
   line-height: normal;
-  padding: .75rem 1.5rem;
+  padding: 0 1.5rem;
   text-align: center;
+  text-overflow: ellipsis;
 
   &:focus-visible {
     outline: .25rem solid #3b99fc;

@@ -28,7 +28,8 @@ export class KitFormFieldInput implements OnChanges {
 	focused = false;
 
 	@Input()
-	type: "text" | "email" | "password" | "tel" | "number" | "date" = "text";
+	type: "text" | "email" | "password" | "tel" | "number" | "date" | "url" =
+		"text";
 
 	@Input()
 	mode: Nullable<"text" | "decimal" | "numeric">;

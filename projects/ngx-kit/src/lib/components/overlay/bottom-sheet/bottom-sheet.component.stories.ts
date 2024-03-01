@@ -6,12 +6,12 @@ import {
 } from "@storybook/angular";
 import { KitButton, KitIconButton } from "../../action";
 import { KitIcon } from "../../icon";
-import { KitDialog } from "./dialog.component";
+import { KitBottomSheet } from "./bottom-sheet.component";
 
-const meta: Meta<KitDialog> = {
-	title: "Component / Overlay / Dialog",
+const meta: Meta<KitBottomSheet> = {
+	title: "Component / Overlay / Bottom Sheet",
 	tags: ["autodocs"],
-	component: KitDialog,
+	component: KitBottomSheet,
 	decorators: [
 		componentWrapperDecorator(
 			(story) => `<div class='storybook-container'>${story}</div>`,
@@ -23,49 +23,49 @@ const meta: Meta<KitDialog> = {
 };
 export default meta;
 
-type Story = StoryObj<KitDialog>;
+type Story = StoryObj<KitBottomSheet>;
 export const Default: Story = {
 	render: () => ({
 		template: `
-            <kit-dialog>
+            <kit-bottom-sheet>
                 Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.
-            </kit-dialog>`,
+            </kit-bottom-sheet>`,
 	}),
 };
 
 export const Title: Story = {
 	render: () => ({
 		template: `
-            <kit-dialog>
-                <span kit-dialog-title>Lorem Ipsum</span>
+            <kit-bottom-sheet>
+                <span kit-bottom-sheet-title>Lorem Ipsum</span>
                 Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.
-            </kit-dialog>`,
+            </kit-bottom-sheet>`,
 	}),
 };
 
 export const Action: Story = {
 	render: () => ({
 		template: `
-            <kit-dialog>
-                <span kit-dialog-title>Lorem Ipsum</span>
+            <kit-bottom-sheet>
+                <span kit-bottom-sheet-title>Lorem Ipsum</span>
                 Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.
-                <button kit-button kit-dialog-action variant='underline'>Worem</button>
-                <button kit-button kit-dialog-action>Lorem</button>
-            </kit-dialog>`,
+                <button kit-button kit-bottom-sheet-action variant='underline'>Worem</button>
+                <button kit-button kit-bottom-sheet-action>Lorem</button>
+            </kit-bottom-sheet>`,
 	}),
 };
 
 export const Icon: Story = {
 	render: () => ({
 		template: `
-            <kit-dialog>
-                <span kit-dialog-title>Lorem Ipsum</span>
-                <button kit-icon-button kit-dialog-close-button type="button">
+            <kit-bottom-sheet>
+                <span kit-bottom-sheet-title>Lorem Ipsum</span>
+                <button kit-icon-button kit-bottom-sheet-close-button type="button">
                     <kit-icon name="close-line" />
                 </button>
                 Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.
-                <button kit-button kit-dialog-action variant='underline'>Worem</button>
-                <button kit-button kit-dialog-action>Lorem</button>
-            </kit-dialog>`,
+                <button kit-button kit-bottom-sheet-action variant='underline'>Worem</button>
+                <button kit-button kit-bottom-sheet-action>Lorem</button>
+            </kit-bottom-sheet>`,
 	}),
 };

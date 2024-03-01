@@ -9,11 +9,16 @@
   --kit-color--secondary: #f3b0cf;
   --kit-color--background: #ffffff;
   --kit-color--border: #dedcd9;
+  --kit-color--divider: #e9ebef;
   --kit-color--focus: #3b99fc;
   --kit-color--error: #c64758;
   --kit-color--text: #31302d;
+  --kit-color--text-body: #717171;
 
   --kit-radius--base: 0px;
+
+  --kit-shadow--base: rgba(0, 0, 0, 0.2) 0 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px,
+  rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
 
   --kit-opacity--disabled: 0.4;
 }

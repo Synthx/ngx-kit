@@ -1,0 +1,12 @@
+<div class="kit-bottom-sheet">
+  <div class="kit-bottom-sheet-title">
+    <ng-content select="span[kit-bottom-sheet-title]"/>
+    <ng-content select="button[kit-bottom-sheet-close-button]"/>
+  </div>
+  <div class="kit-bottom-sheet-content">
+    <ng-content/>
+  </div>
+  <div class="kit-bottom-sheet-actions">
+    <ng-content select="[kit-bottom-sheet-action]"/>
+  </div>
+</div>

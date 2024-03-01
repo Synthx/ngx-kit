@@ -13,7 +13,7 @@
       "prefix": "kit",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss",
+          "style": "none",
           "skipTests": true
         },
         "@schematics/angular:pipe": {

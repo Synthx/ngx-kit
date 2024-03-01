@@ -1,20 +1,25 @@
-.kit-fullscreen-dialog-panel {
-  .kit-dialog {
-    height: 100%;
-    border-radius: 0;
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-top: env(safe-area-inset-top);
-    max-height: 100%;
+.kit-bottom-sheet-panel {
+  .cdk-dialog-container {
+    height: unset;
+    max-height: 85%;
   }
 }
 
-.kit-dialog {
+.kit-bottom-sheet-web-panel {
+  .kit-bottom-sheet {
+    border-radius: 0;
+    height: 100%;
+  }
+}
+
+.kit-bottom-sheet {
+  max-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--kit-color--background);
-  border-radius: var(--kit-radius--base);
+  background: var(--kit-color--background);
+  border-radius: var(--kit-radius--base) var(--kit-radius--base) 0 0;
   box-shadow: var(--kit-shadow--base);
-  max-height: 85vh;
+  padding-bottom: env(safe-area-inset-bottom);
 
   &-title {
     min-height: 64px;
@@ -22,14 +27,15 @@
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
+    border-radius: var(--kit-radius--base) var(--kit-radius--base) 0 0;
     border-bottom: 1px solid var(--kit-color--divider);
-    padding: 10px 20px;
+    padding: 14px 20px;
 
     &:empty {
       display: none;
     }
 
-    span[kit-dialog-title] {
+    span[kit-bottom-sheet-title] {
       flex: 1;
       color: var(--kit-color--primary);
       font-family: var(--kit-typo--font-family);
@@ -41,28 +47,28 @@
 
   &-content {
     flex: 1;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    overflow-y: auto;
     padding: 20px;
     color: var(--kit-color--primary);
     font-family: var(--kit-typo--font-family);
     font-weight: 400;
     font-size: 15px;
+  }
 
-    &-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+  &-actions {
+    display: flex;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid var(--kit-color--divider);
 
-      &:empty {
-        display: none;
-      }
+    &:empty {
+      display: none;
+    }
 
-      > * {
-        flex: 1;
-      }
+    > * {
+      flex: 1;
     }
   }
 }

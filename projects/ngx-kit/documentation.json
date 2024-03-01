@@ -1025,12 +1025,12 @@
 		},
 		{
 			"name": "KitFormFieldInput",
-			"id": "directive-KitFormFieldInput-7c8a81128a779353698943e5ecef9c34f47b788e35c4910f7b45cc4fa8af356224a465897152ecdfd9ab3f5b059bf6c1b4204c17d99bcb6fe861865eb97fb95c",
+			"id": "directive-KitFormFieldInput-722a99b7b46edf5c24732555e22433752999b257a91bb19f8858c5e5d81d41329b7d2307086817b65ded45d2f5b82c9515f68e429142ed84c7394c640a8e2eef",
 			"file": "projects/ngx-kit/src/lib/components/form/form-field/form-field-input.directive.ts",
 			"type": "directive",
 			"description": "",
 			"rawdescription": "\n",
-			"sourceCode": "import { Directive, ElementRef, Input, OnChanges, inject } from \"@angular/core\";\nimport { NgControl, ValidationErrors, Validators } from \"@angular/forms\";\nimport { Nullable } from \"../../../core\";\nimport {\n\tInputErrorStateMatcherFn,\n\tdefaultInputErrorStateMatcher,\n} from \"./form-field-input.options\";\n\nlet nextId = 0;\n\n@Directive({\n\tselector:\n\t\t\"input[kitFormFieldInput], textarea[kitFormFieldInput], select[kitFormFieldInput]\",\n\thost: {\n\t\tclass: \"kit-form-field-input\",\n\t\t\"[class.kit-form-field-input--select]\": \"_isSelect\",\n\t\t\"[class.kit-form-field-input--textarea]\": \"_isTextarea\",\n\t\t\"[class.kit-form-field-input--invalid]\": \"invalid\",\n\t\t\"[id]\": \"inputId\",\n\t\t\"[attr.id]\": \"inputId\",\n\t\t\"[enterkeyhint]\": \"mode\",\n\t\t\"[inputmode]\": \"hint\",\n\t\t\"(blur)\": \"setFocused(false)\",\n\t\t\"(focus)\": \"setFocused(true)\",\n\t},\n})\nexport class KitFormFieldInput implements OnChanges {\n\tfocused = false;\n\n\t@Input()\n\ttype: \"text\" | \"email\" | \"password\" | \"tel\" | \"number\" | \"date\" = \"text\";\n\n\t@Input()\n\tmode: Nullable<\"text\" | \"decimal\" | \"numeric\">;\n\n\t@Input()\n\thint: Nullable<\n\t\t\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\"\n\t>;\n\n\t@Input()\n\tid: Nullable<string>;\n\n\t@Input()\n\tstateMatcher: Nullable<InputErrorStateMatcherFn>;\n\n\t_isTextarea: boolean;\n\t_isSelect: boolean;\n\t_uniqueId = `kit-form-field-input-${nextId++}`;\n\n\tprivate readonly ngControl = inject(NgControl, { self: true });\n\n\tget inputId(): string {\n\t\treturn this.id ?? this._uniqueId;\n\t}\n\n\tget empty(): boolean {\n\t\treturn (\n\t\t\t!this.elementRef.nativeElement.value &&\n\t\t\t!this.isBadInput() &&\n\t\t\t!this.isNeverEmpty()\n\t\t);\n\t}\n\n\tget errors(): ValidationErrors | null {\n\t\treturn this.ngControl.errors;\n\t}\n\n\tget disabled(): boolean {\n\t\treturn this.ngControl.disabled ?? false;\n\t}\n\n\tget invalid(): boolean {\n\t\treturn (\n\t\t\tthis.stateMatcher?.(this.ngControl) ??\n\t\t\tdefaultInputErrorStateMatcher(this.ngControl)\n\t\t);\n\t}\n\n\tget pending(): boolean {\n\t\treturn this.ngControl.pending ?? false;\n\t}\n\n\tget required(): boolean {\n\t\treturn this.ngControl.control?.hasValidator(Validators.required) ?? false;\n\t}\n\n\tconstructor(\n\t\tprivate elementRef: ElementRef<\n\t\t\tHTMLInputElement | HTMLSelectElement | HTMLTextAreaElement\n\t\t>,\n\t) {\n\t\tconst element = this.elementRef.nativeElement;\n\t\tconst nodeName = element.nodeName.toLowerCase();\n\n\t\tthis._isTextarea = nodeName === \"textarea\";\n\t\tthis._isSelect = nodeName === \"select\";\n\t}\n\n\tngOnChanges(): void {\n\t\tif (!this._isTextarea && !this._isSelect) {\n\t\t\t(this.elementRef.nativeElement as HTMLInputElement).type = this.type;\n\t\t}\n\t}\n\n\tprivate isNeverEmpty() {\n\t\tconst neverEmptyInputTypes = [\n\t\t\t\"date\",\n\t\t\t\"datetime\",\n\t\t\t\"datetime-local\",\n\t\t\t\"month\",\n\t\t\t\"time\",\n\t\t\t\"week\",\n\t\t];\n\n\t\treturn neverEmptyInputTypes.indexOf(this.type) > -1;\n\t}\n\n\tprivate isBadInput() {\n\t\treturn this.elementRef.nativeElement.validity.badInput;\n\t}\n\n\tsetFocused(focused: boolean): void {\n\t\tthis.focused = focused;\n\t}\n}\n",
+			"sourceCode": "import { Directive, ElementRef, Input, OnChanges, inject } from \"@angular/core\";\nimport { NgControl, ValidationErrors, Validators } from \"@angular/forms\";\nimport { Nullable } from \"../../../core\";\nimport {\n\tInputErrorStateMatcherFn,\n\tdefaultInputErrorStateMatcher,\n} from \"./form-field-input.options\";\n\nlet nextId = 0;\n\n@Directive({\n\tselector:\n\t\t\"input[kitFormFieldInput], textarea[kitFormFieldInput], select[kitFormFieldInput]\",\n\thost: {\n\t\tclass: \"kit-form-field-input\",\n\t\t\"[class.kit-form-field-input--select]\": \"_isSelect\",\n\t\t\"[class.kit-form-field-input--textarea]\": \"_isTextarea\",\n\t\t\"[class.kit-form-field-input--invalid]\": \"invalid\",\n\t\t\"[id]\": \"inputId\",\n\t\t\"[attr.id]\": \"inputId\",\n\t\t\"[enterkeyhint]\": \"mode\",\n\t\t\"[inputmode]\": \"hint\",\n\t\t\"(blur)\": \"setFocused(false)\",\n\t\t\"(focus)\": \"setFocused(true)\",\n\t},\n})\nexport class KitFormFieldInput implements OnChanges {\n\tfocused = false;\n\n\t@Input()\n\ttype: \"text\" | \"email\" | \"password\" | \"tel\" | \"number\" | \"date\" | \"url\" =\n\t\t\"text\";\n\n\t@Input()\n\tmode: Nullable<\"text\" | \"decimal\" | \"numeric\">;\n\n\t@Input()\n\thint: Nullable<\n\t\t\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\"\n\t>;\n\n\t@Input()\n\tid: Nullable<string>;\n\n\t@Input()\n\tstateMatcher: Nullable<InputErrorStateMatcherFn>;\n\n\t_isTextarea: boolean;\n\t_isSelect: boolean;\n\t_uniqueId = `kit-form-field-input-${nextId++}`;\n\n\tprivate readonly ngControl = inject(NgControl, { self: true });\n\n\tget inputId(): string {\n\t\treturn this.id ?? this._uniqueId;\n\t}\n\n\tget empty(): boolean {\n\t\treturn (\n\t\t\t!this.elementRef.nativeElement.value &&\n\t\t\t!this.isBadInput() &&\n\t\t\t!this.isNeverEmpty()\n\t\t);\n\t}\n\n\tget errors(): ValidationErrors | null {\n\t\treturn this.ngControl.errors;\n\t}\n\n\tget disabled(): boolean {\n\t\treturn this.ngControl.disabled ?? false;\n\t}\n\n\tget invalid(): boolean {\n\t\treturn (\n\t\t\tthis.stateMatcher?.(this.ngControl) ??\n\t\t\tdefaultInputErrorStateMatcher(this.ngControl)\n\t\t);\n\t}\n\n\tget pending(): boolean {\n\t\treturn this.ngControl.pending ?? false;\n\t}\n\n\tget required(): boolean {\n\t\treturn this.ngControl.control?.hasValidator(Validators.required) ?? false;\n\t}\n\n\tconstructor(\n\t\tprivate elementRef: ElementRef<\n\t\t\tHTMLInputElement | HTMLSelectElement | HTMLTextAreaElement\n\t\t>,\n\t) {\n\t\tconst element = this.elementRef.nativeElement;\n\t\tconst nodeName = element.nodeName.toLowerCase();\n\n\t\tthis._isTextarea = nodeName === \"textarea\";\n\t\tthis._isSelect = nodeName === \"select\";\n\t}\n\n\tngOnChanges(): void {\n\t\tif (!this._isTextarea && !this._isSelect) {\n\t\t\t(this.elementRef.nativeElement as HTMLInputElement).type = this.type;\n\t\t}\n\t}\n\n\tprivate isNeverEmpty() {\n\t\tconst neverEmptyInputTypes = [\n\t\t\t\"date\",\n\t\t\t\"datetime\",\n\t\t\t\"datetime-local\",\n\t\t\t\"month\",\n\t\t\t\"time\",\n\t\t\t\"week\",\n\t\t];\n\n\t\treturn neverEmptyInputTypes.indexOf(this.type) > -1;\n\t}\n\n\tprivate isBadInput() {\n\t\treturn this.elementRef.nativeElement.validity.badInput;\n\t}\n\n\tsetFocused(focused: boolean): void {\n\t\tthis.focused = focused;\n\t}\n}\n",
 			"selector": "input[kitFormFieldInput], textarea[kitFormFieldInput], select[kitFormFieldInput]",
 			"providers": [],
 			"hostDirectives": [],
@@ -1040,7 +1040,7 @@
 					"name": "hint",
 					"deprecated": false,
 					"deprecationMessage": "",
-					"line": 37,
+					"line": 38,
 					"type": "Nullable<\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\">",
 					"decorators": []
 				},
@@ -1048,7 +1048,7 @@
 					"name": "id",
 					"deprecated": false,
 					"deprecationMessage": "",
-					"line": 42,
+					"line": 43,
 					"type": "Nullable<string>",
 					"decorators": []
 				},
@@ -1056,7 +1056,7 @@
 					"name": "mode",
 					"deprecated": false,
 					"deprecationMessage": "",
-					"line": 34,
+					"line": 35,
 					"type": "Nullable<\"text\" | \"decimal\" | \"numeric\">",
 					"decorators": []
 				},
@@ -1064,7 +1064,7 @@
 					"name": "stateMatcher",
 					"deprecated": false,
 					"deprecationMessage": "",
-					"line": 45,
+					"line": 46,
 					"type": "Nullable<InputErrorStateMatcherFn>",
 					"decorators": []
 				},
@@ -1074,7 +1074,7 @@
 					"deprecated": false,
 					"deprecationMessage": "",
 					"line": 31,
-					"type": "\"text\" | \"email\" | \"password\" | \"tel\" | \"number\" | \"date\"",
+					"type": "\"text\" | \"email\" | \"password\" | \"tel\" | \"number\" | \"date\" | \"url\"",
 					"decorators": []
 				}
 			],
@@ -1091,7 +1091,7 @@
 					"type": "boolean",
 					"optional": false,
 					"description": "",
-					"line": 48
+					"line": 49
 				},
 				{
 					"name": "_isTextarea",
@@ -1100,7 +1100,7 @@
 					"type": "boolean",
 					"optional": false,
 					"description": "",
-					"line": 47
+					"line": 48
 				},
 				{
 					"name": "_uniqueId",
@@ -1110,7 +1110,7 @@
 					"type": "",
 					"optional": false,
 					"description": "",
-					"line": 49
+					"line": 50
 				},
 				{
 					"name": "focused",
@@ -1130,7 +1130,7 @@
 					"type": "",
 					"optional": false,
 					"description": "",
-					"line": 51,
+					"line": 52,
 					"modifierKind": [123, 148]
 				}
 			],
@@ -1141,7 +1141,7 @@
 					"optional": false,
 					"returnType": "any",
 					"typeParameters": [],
-					"line": 119,
+					"line": 120,
 					"deprecated": false,
 					"deprecationMessage": "",
 					"modifierKind": [123]
@@ -1152,7 +1152,7 @@
 					"optional": false,
 					"returnType": "boolean",
 					"typeParameters": [],
-					"line": 106,
+					"line": 107,
 					"deprecated": false,
 					"deprecationMessage": "",
 					"modifierKind": [123]
@@ -1163,7 +1163,7 @@
 					"optional": false,
 					"returnType": "void",
 					"typeParameters": [],
-					"line": 100,
+					"line": 101,
 					"deprecated": false,
 					"deprecationMessage": ""
 				},
@@ -1180,7 +1180,7 @@
 					"optional": false,
 					"returnType": "void",
 					"typeParameters": [],
-					"line": 123,
+					"line": 124,
 					"deprecated": false,
 					"deprecationMessage": "",
 					"jsdoctags": [
@@ -1211,7 +1211,7 @@
 						"deprecationMessage": ""
 					}
 				],
-				"line": 86,
+				"line": 87,
 				"jsdoctags": [
 					{
 						"name": "elementRef",
@@ -1231,7 +1231,7 @@
 						"name": "inputId",
 						"type": "string",
 						"returnType": "string",
-						"line": 53
+						"line": 54
 					}
 				},
 				"empty": {
@@ -1240,7 +1240,7 @@
 						"name": "empty",
 						"type": "boolean",
 						"returnType": "boolean",
-						"line": 57
+						"line": 58
 					}
 				},
 				"errors": {
@@ -1249,7 +1249,7 @@
 						"name": "errors",
 						"type": "",
 						"returnType": "ValidationErrors | null",
-						"line": 65
+						"line": 66
 					}
 				},
 				"disabled": {
@@ -1258,7 +1258,7 @@
 						"name": "disabled",
 						"type": "boolean",
 						"returnType": "boolean",
-						"line": 69
+						"line": 70
 					}
 				},
 				"invalid": {
@@ -1267,7 +1267,7 @@
 						"name": "invalid",
 						"type": "boolean",
 						"returnType": "boolean",
-						"line": 73
+						"line": 74
 					}
 				},
 				"pending": {
@@ -1276,7 +1276,7 @@
 						"name": "pending",
 						"type": "boolean",
 						"returnType": "boolean",
-						"line": 80
+						"line": 81
 					}
 				},
 				"required": {
@@ -1285,7 +1285,7 @@
 						"name": "required",
 						"type": "boolean",
 						"returnType": "boolean",
-						"line": 84
+						"line": 85
 					}
 				}
 			}
@@ -1496,6 +1496,41 @@
 		}
 	],
 	"components": [
+		{
+			"name": "KitBottomSheet",
+			"id": "component-KitBottomSheet-9dd41e83e09d632d7779eb21eb37ee798eb8e53cf58557cb774a1bc081775fc159960b164e73266156addd131516df9f5377b60b9afe8b9231f1335705fb6b70",
+			"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.ts",
+			"encapsulation": [],
+			"entryComponents": [],
+			"inputs": [],
+			"outputs": [],
+			"providers": [],
+			"selector": "kit-bottom-sheet",
+			"styleUrls": [],
+			"styles": [],
+			"templateUrl": ["./bottom-sheet.component.html"],
+			"viewProviders": [],
+			"hostDirectives": [],
+			"inputsClass": [],
+			"outputsClass": [],
+			"propertiesClass": [],
+			"methodsClass": [],
+			"deprecated": false,
+			"deprecationMessage": "",
+			"hostBindings": [],
+			"hostListeners": [],
+			"standalone": true,
+			"imports": [],
+			"description": "",
+			"rawdescription": "\n",
+			"type": "component",
+			"sourceCode": "import { Component } from \"@angular/core\";\n\n@Component({\n\tstandalone: true,\n\tselector: \"kit-bottom-sheet\",\n\ttemplateUrl: \"./bottom-sheet.component.html\",\n})\nexport class KitBottomSheet {}\n",
+			"assetsDirs": [],
+			"styleUrlsData": "",
+			"stylesData": "",
+			"extends": [],
+			"templateData": "<div class=\"kit-bottom-sheet\">\n  <div class=\"kit-bottom-sheet-title\">\n    <ng-content select=\"span[kit-bottom-sheet-title]\"/>\n    <ng-content select=\"button[kit-bottom-sheet-close-button]\"/>\n  </div>\n  <div class=\"kit-bottom-sheet-content\">\n    <ng-content/>\n  </div>\n  <div class=\"kit-bottom-sheet-actions\">\n    <ng-content select=\"[kit-bottom-sheet-action]\"/>\n  </div>\n</div>\n"
+		},
 		{
 			"name": "KitButton",
 			"id": "component-KitButton-9f05d591bcbc04ba77bfd55ca81183a61112adea547e0d9342b09af19a911ef4fb6955ada81426137a2663f9f4ea21c42ef7056a63a4a68ca9f8a825d9a7ae41",
@@ -2847,11 +2882,21 @@
 				"name": "Action",
 				"ctype": "miscellaneous",
 				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-bottom-sheet>\n                <span kit-bottom-sheet-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-bottom-sheet-action variant='underline'>Worem</button>\n                <button kit-button kit-bottom-sheet-action>Lorem</button>\n            </kit-bottom-sheet>`,\n\t}),\n}"
+			},
+			{
+				"name": "Action",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
 				"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
 				"deprecated": false,
 				"deprecationMessage": "",
 				"type": "Story",
-				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                <span kit-dialog-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-dialog-action variant='secondary'>Worem</button>\n                <button kit-button kit-dialog-action>Lorem</button>\n            </kit-dialog>`,\n\t}),\n}"
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                <span kit-dialog-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-dialog-action variant='underline'>Worem</button>\n                <button kit-button kit-dialog-action>Lorem</button>\n            </kit-dialog>`,\n\t}),\n}"
 			},
 			{
 				"name": "blurInputErrorStateMatcher",
@@ -2942,6 +2987,16 @@
 				"deprecationMessage": "",
 				"type": "Story",
 				"defaultValue": "{}"
+			},
+			{
+				"name": "Default",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-bottom-sheet>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n            </kit-bottom-sheet>`,\n\t}),\n}"
 			},
 			{
 				"name": "Default",
@@ -3052,6 +3107,26 @@
 				"deprecationMessage": "",
 				"type": "Story",
 				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `<button kit-button><kit-icon name=\"brush-line\" />Click me</button>`,\n\t}),\n}"
+			},
+			{
+				"name": "Icon",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-bottom-sheet>\n                <span kit-bottom-sheet-title>Lorem Ipsum</span>\n                <button kit-icon-button kit-bottom-sheet-action type=\"button\">\n                    <kit-icon name=\"close-line\" />\n                </button>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-bottom-sheet-action variant='underline'>Worem</button>\n                <button kit-button kit-bottom-sheet-action>Lorem</button>\n            </kit-bottom-sheet>`,\n\t}),\n}"
+			},
+			{
+				"name": "Icon",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                <span kit-dialog-title>Lorem Ipsum</span>\n                <button kit-icon-button kit-dialog-action type=\"button\">\n                    <kit-icon name=\"close-line\" />\n                </button>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-dialog-action variant='underline'>Worem</button>\n                <button kit-button kit-dialog-action>Lorem</button>\n            </kit-dialog>`,\n\t}),\n}"
 			},
 			{
 				"name": "Icon",
@@ -3187,11 +3262,21 @@
 				"name": "meta",
 				"ctype": "miscellaneous",
 				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Meta<KitBottomSheet>",
+				"defaultValue": "{\n\ttitle: \"Component / Overlay / Bottom Sheet\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitBottomSheet,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div class='storybook-container'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [KitButton, KitIcon, KitIconButton],\n\t\t}),\n\t],\n}"
+			},
+			{
+				"name": "meta",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
 				"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
 				"deprecated": false,
 				"deprecationMessage": "",
 				"type": "Meta<KitDialog>",
-				"defaultValue": "{\n\ttitle: \"Component / Overlay / Dialog\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitDialog,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div class='storybook-container'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [KitButton],\n\t\t}),\n\t],\n}"
+				"defaultValue": "{\n\ttitle: \"Component / Overlay / Dialog\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitDialog,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div class='storybook-container'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [KitButton, KitIcon, KitIconButton],\n\t\t}),\n\t],\n}"
 			},
 			{
 				"name": "meta",
@@ -3322,6 +3407,16 @@
 				"deprecationMessage": "",
 				"type": "Story",
 				"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <textarea kitFormFieldInput [formControl]='control'></textarea>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
+			},
+			{
+				"name": "Title",
+				"ctype": "miscellaneous",
+				"subtype": "variable",
+				"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"type": "Story",
+				"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-bottom-sheet>\n                <span kit-bottom-sheet-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n            </kit-bottom-sheet>`,\n\t}),\n}"
 			},
 			{
 				"name": "Title",
@@ -3545,6 +3640,17 @@
 				"name": "Story",
 				"ctype": "miscellaneous",
 				"subtype": "typealias",
+				"rawtype": "StoryObj<KitBottomSheet>",
+				"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"deprecated": false,
+				"deprecationMessage": "",
+				"description": "",
+				"kind": 183
+			},
+			{
+				"name": "Story",
+				"ctype": "miscellaneous",
+				"subtype": "typealias",
 				"rawtype": "StoryObj<KitDialog>",
 				"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
 				"deprecated": false,
@@ -3668,6 +3774,58 @@
 					"defaultValue": "{\n\t...Default,\n\trender: (args) => {\n\t\tconst control = new FormControl(\"\");\n\n\t\treturn {\n\t\t\tprops: { ...args, control },\n\t\t\ttemplate: `\n                <kit-form-field>\n                    Label\n                    <textarea kitFormFieldInput [formControl]='control'></textarea>\n                </kit-form-field>\n                <pre class='storybook-code'>{{ control.value | json }}</pre>`,\n\t\t};\n\t},\n}"
 				}
 			],
+			"projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts": [
+				{
+					"name": "Action",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-bottom-sheet>\n                <span kit-bottom-sheet-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-bottom-sheet-action variant='underline'>Worem</button>\n                <button kit-button kit-bottom-sheet-action>Lorem</button>\n            </kit-bottom-sheet>`,\n\t}),\n}"
+				},
+				{
+					"name": "Default",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-bottom-sheet>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n            </kit-bottom-sheet>`,\n\t}),\n}"
+				},
+				{
+					"name": "Icon",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-bottom-sheet>\n                <span kit-bottom-sheet-title>Lorem Ipsum</span>\n                <button kit-icon-button kit-bottom-sheet-action type=\"button\">\n                    <kit-icon name=\"close-line\" />\n                </button>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-bottom-sheet-action variant='underline'>Worem</button>\n                <button kit-button kit-bottom-sheet-action>Lorem</button>\n            </kit-bottom-sheet>`,\n\t}),\n}"
+				},
+				{
+					"name": "meta",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Meta<KitBottomSheet>",
+					"defaultValue": "{\n\ttitle: \"Component / Overlay / Bottom Sheet\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitBottomSheet,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div class='storybook-container'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [KitButton, KitIcon, KitIconButton],\n\t\t}),\n\t],\n}"
+				},
+				{
+					"name": "Title",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-bottom-sheet>\n                <span kit-bottom-sheet-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n            </kit-bottom-sheet>`,\n\t}),\n}"
+				}
+			],
 			"projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts": [
 				{
 					"name": "Action",
@@ -3677,7 +3835,7 @@
 					"deprecated": false,
 					"deprecationMessage": "",
 					"type": "Story",
-					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                <span kit-dialog-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-dialog-action variant='secondary'>Worem</button>\n                <button kit-button kit-dialog-action>Lorem</button>\n            </kit-dialog>`,\n\t}),\n}"
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                <span kit-dialog-title>Lorem Ipsum</span>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-dialog-action variant='underline'>Worem</button>\n                <button kit-button kit-dialog-action>Lorem</button>\n            </kit-dialog>`,\n\t}),\n}"
 				},
 				{
 					"name": "Default",
@@ -3690,6 +3848,16 @@
 					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n            </kit-dialog>`,\n\t}),\n}"
 				},
 				{
+					"name": "Icon",
+					"ctype": "miscellaneous",
+					"subtype": "variable",
+					"file": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"type": "Story",
+					"defaultValue": "{\n\trender: () => ({\n\t\ttemplate: `\n            <kit-dialog>\n                <span kit-dialog-title>Lorem Ipsum</span>\n                <button kit-icon-button kit-dialog-action type=\"button\">\n                    <kit-icon name=\"close-line\" />\n                </button>\n                Nunc sed quam eget sapien molestie dignissim. Phasellus a tempus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dui felis.\n                <button kit-button kit-dialog-action variant='underline'>Worem</button>\n                <button kit-button kit-dialog-action>Lorem</button>\n            </kit-dialog>`,\n\t}),\n}"
+				},
+				{
 					"name": "meta",
 					"ctype": "miscellaneous",
 					"subtype": "variable",
@@ -3697,7 +3865,7 @@
 					"deprecated": false,
 					"deprecationMessage": "",
 					"type": "Meta<KitDialog>",
-					"defaultValue": "{\n\ttitle: \"Component / Overlay / Dialog\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitDialog,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div class='storybook-container'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [KitButton],\n\t\t}),\n\t],\n}"
+					"defaultValue": "{\n\ttitle: \"Component / Overlay / Dialog\",\n\ttags: [\"autodocs\"],\n\tcomponent: KitDialog,\n\tdecorators: [\n\t\tcomponentWrapperDecorator(\n\t\t\t(story) => `<div class='storybook-container'>${story}</div>`,\n\t\t),\n\t\tmoduleMetadata({\n\t\t\timports: [KitButton, KitIcon, KitIconButton],\n\t\t}),\n\t],\n}"
 				},
 				{
 					"name": "Title",
@@ -4337,6 +4505,19 @@
 					"kind": 183
 				}
 			],
+			"projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts": [
+				{
+					"name": "Story",
+					"ctype": "miscellaneous",
+					"subtype": "typealias",
+					"rawtype": "StoryObj<KitBottomSheet>",
+					"file": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+					"deprecated": false,
+					"deprecationMessage": "",
+					"description": "",
+					"kind": 183
+				}
+			],
 			"projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts": [
 				{
 					"name": "Story",
@@ -4898,6 +5079,65 @@
 				"status": "low"
 			},
 			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Action",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Icon",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "meta",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Title",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/bottom-sheet/bottom-sheet.component.ts",
+				"type": "component",
+				"linktype": "component",
+				"name": "KitBottomSheet",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
 				"filePath": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog-close.directive.ts",
 				"type": "directive",
 				"linktype": "directive",
@@ -4931,6 +5171,16 @@
 				"linktype": "miscellaneous",
 				"linksubtype": "variable",
 				"name": "Default",
+				"coveragePercent": 0,
+				"coverageCount": "0/1",
+				"status": "low"
+			},
+			{
+				"filePath": "projects/ngx-kit/src/lib/components/overlay/dialog/dialog.component.stories.ts",
+				"type": "variable",
+				"linktype": "miscellaneous",
+				"linksubtype": "variable",
+				"name": "Icon",
 				"coveragePercent": 0,
 				"coverageCount": "0/1",
 				"status": "low"
