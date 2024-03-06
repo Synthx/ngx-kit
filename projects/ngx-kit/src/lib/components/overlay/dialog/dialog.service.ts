@@ -96,7 +96,7 @@ export class KitDialogService {
 		config?: DialogConfig<D, DialogRef<R, C>>,
 	): DialogRef<R, C> {
 		const defaultConfig: DialogConfig<D, DialogRef<R, C>> = {
-			panelClass: "kia-bottom-sheet-panel",
+			panelClass: "kit-bottom-sheet-panel",
 			maxHeight: "85%",
 			width: "100%",
 			maxWidth: "100%",
@@ -105,7 +105,7 @@ export class KitDialogService {
 
 		const isWeb = this.breakpointObserver.isMatched(Breakpoints.Web);
 		if (isWeb) {
-			defaultConfig.panelClass = "kia-bottom-sheet-web-panel";
+			defaultConfig.panelClass = "kit-bottom-sheet-web-panel";
 			defaultConfig.height = "100%";
 			defaultConfig.maxHeight = "100%";
 			defaultConfig.width = "550px";
